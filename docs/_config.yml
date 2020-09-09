@@ -1,3 +1,13 @@
 title: Text Classifier
 author: Kevin Lin
 description: Implementing a decision tree data type for text classification
+permalink: pretty
+
+github:
+  private: false
+  license:
+    name: MIT
+  source:
+    branch: "master"
+    path: "/docs"
+  repository_url: "https://github.com/kevinlin1/text-classifier"
