@@ -1,4 +1,10 @@
-Inspired by [Perspective API](https://www.perspectiveapi.com/) and its real-time comment moderation tools, this Nifty Assignment is about improving online conversations by {{ site.description | downcase }}.
+Inspired by [Perspective API](https://www.perspectiveapi.com/) and its real-time comment moderation tools, this Nifty Assignment is about improving online conversations by {{ site.description | downcase }}.[^0]
+
+[^0]: Machine learning models are trained on human-selected and human-generated datasets. Such models encode and reproduce the implicit bias inherent in the datasets. This model is not meant to generalize beyond the toy training datasets. Don’t use this in a real system!
+
+      The included vectorization algorithms also encode explicit bias. The vectorization ignores all grammar and syntax, treating each occurrence of a word as independent from all other words in the text. Any usage of a word, no matter the context, is considered equally toxic or spammy.
+
+      The provided datasets contain text that may be considered profane, vulgar, or offensive.
 
 Online abuse and harassment stops people from engaging in conversation. One area of focus is the study of negative online behaviors, such as **toxic comments**: user-written comments that are rude, disrespectful or otherwise likely to make someone leave a discussion. Platforms struggle to effectively facilitate conversations, leading many communities to [limit](https://meta.stackexchange.com/q/342779) or [completely shut down](https://en.wikipedia.org/wiki/R/The_Donald#Quarantine,_restriction,_ban_and_successor) user comments. In 2018, the [Conversation AI](https://conversationai.github.io/) team, a research initiative founded by [Jigsaw](https://jigsaw.google.com/) and Google (both part of Alphabet), organized a public competition called the [Toxic Comment Classification Challenge](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge) to build better machine learning systems for detecting different types of of toxicity like threats, obscenity, insults, and identity-based hate.[^1]
 
