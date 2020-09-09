@@ -1,3 +1,9 @@
+---
+title: Text Classifier
+---
+
+# Text Classifier
+
 Inspired by [Perspective API](https://www.perspectiveapi.com/) and its real-time comment moderation tools, this Nifty Assignment is about improving online conversations by {{ site.description | downcase }}.[^0]
 
 [^0]: Machine learning models are trained on human-selected and human-generated datasets. Such models encode and reproduce the implicit bias inherent in the datasets. This model is not meant to generalize beyond the toy training datasets. Don’t use this in a real system!
