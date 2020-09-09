@@ -20,24 +20,24 @@ Summary
 : Improve online conversations by {{ site.description | downcase }}.
 
 Topics
-: Binary search trees, recursion, lists and maps.
+: Data structures, binary trees, binary search trees, recursion, mutation.
 
 Audience
-: CS2.
+: A second programming course (CS2), a data structures course, or a machine learning course.
 
 Difficulty
-: All NLP concepts are abstracted away. The programming task (as we envisioned the assignment) focused on 4 binary search tree operations that can be solved by applying problem solving templates taught in class.
+: While the assignment is motivated by a hard problem in natural language processing (NLP, a subfield of machine learning), it focuses on programming 4 fundamental binary search tree operations that can be solved by applying programming problem solving templates taught in class. We provide CS2 students all of the NLP and machine learning concepts as abstractions.
 
 Strengths
-: Text classification explores the **social implications of computing** since students learn how programming can address (but not solve) problems that have been at the center of popular attention such as [toxic comment classification](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/overview). A spam email classification dataset is also included.
-: Students can run the **bundled web app** and test their decision tree classifier on any text in realtime. Web apps are uniquely authentic and engaging since students can see their code served beyond their computer screen and accessible to anyone online.
-: NLP abstractions allow instructors to **customize learning objectives**. We focus on data structures and algorithms, but other courses can emphasize information and treat the decision tree as an abstraction.
+: Text classification explores a **social implication of computing** since students learn how programming can address (but not fully solve) real-world problems that have been at the center of popular attention. The assignment touches on the limits of computing by pointing out how algorithms are ultimately dependent on the given data.
+: Students can run the **bundled web app** and test their decision tree classifier on any text in realtime. Web apps are uniquely authentic and engaging since students can see their code served beyond their computer screen and accessible to anyone online. A [fully-functional demo](https://toxicity-classification.herokuapp.com/) is available online, though the first visit may take around 30 seconds for the server to wake up and re-train the model.
+: The provided abstractions allow instructors to **customize learning objectives**. We focus on data structures and algorithms, but other courses can flip the abstractions: instructors can provide the decision tree as an abstraction so that students can focus on implementing the machine learning components.
 
 Weaknesses
-: The NLP abstractions allow students to focus on the data structures by hiding the details of the data representation. While students can interact with the dataset, the data itself is mostly an abstraction so questions about the relative importance of data vs. code and how they impact society are not explicitly explored.
+: The provided abstractions allow students to focus on programming the decision tree data structure by hiding all of the machine learning implementation. While students can interact with the dataset, students likely won't feel that they understand everything about the assignment compared to something they write entirely on their own.
 
 Dependencies
-: No external dependencies. All NLP abstractions and the web app are self-contained and supported by regular JDK.
+: There are no particular course content knowledge dependencies beyond their typical treatment in a programming-focused CS2 course. Some of the machine learning abstractions depend on [Smile (Statistical Machine Intelligence and Learning Engine)](https://haifengl.github.io/), a Java library for machine learning similar to [scikit-learn](https://scikit-learn.org/) for Python. 5MB of `jar` files need to be distributed alongside the source code.
 
 Variants
-: Rather than focus on data structures and algorithms, the assignment could instead focus on datasets and data representation. Organize a Kaggle competition to emphasize effective data representation for decision trees. Or reflect critically on the decisions that may be explicitly or implicitly encoded in algorithms and datasets by examining [unintended bias in toxicity classification](https://www.kaggle.com/c/jigsaw-unintended-bias-in-toxicity-classification).
+: Rather than focus on data structures and algorithms, the assignment could instead focus on datasets and data representation. Instructors can also organize Kaggle competitions to give students exposure to the community and teamwork aspects involved in developing better machine learning algorithms. Rather than focus on programming, the assignment could instead focus on computer ethics and investigate [unintended bias in toxicity classification](https://www.kaggle.com/c/jigsaw-unintended-bias-in-toxicity-classification).
