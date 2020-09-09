@@ -30,7 +30,8 @@ Difficulty
 
 Strengths
 : Text classification explores a **social implication of computing** since students learn how programming can address (but not fully solve) real-world problems that have been at the center of popular attention. The assignment touches on the limits of computing by pointing out how algorithms are ultimately dependent on the given data.
-: Students can run the **bundled web app** and test their decision tree classifier on any text in realtime. Web apps are uniquely authentic and engaging since students can see their code served beyond their computer screen and accessible to anyone online. A [fully-functional demo](https://toxicity-classification.herokuapp.com/) is available online, though the first visit may take around 30 seconds for the server to wake up and re-train the model.
+: Students can run the **bundled web app** and test their decision tree classifier on any text in realtime. Web apps are uniquely authentic and engaging since students can see their code served beyond their computer screen and accessible to anyone online. Students can also host their web app for free online.
+
 : The provided abstractions allow instructors to **customize learning objectives**. We focus on data structures and algorithms, but other courses can flip the abstractions: instructors can provide the decision tree as an abstraction so that students can focus on implementing the machine learning components.
 
 Weaknesses
@@ -41,3 +42,23 @@ Dependencies
 
 Variants
 : Rather than focus on data structures and algorithms, the assignment could instead focus on datasets and data representation. Instructors can also organize Kaggle competitions to give students exposure to the community and teamwork aspects involved in developing better machine learning algorithms. Rather than focus on programming, the assignment could instead focus on computer ethics and investigate [unintended bias in toxicity classification](https://www.kaggle.com/c/jigsaw-unintended-bias-in-toxicity-classification).
+
+## Getting started
+
+The simplest way to use the text classifier is through the [web app](https://toxicity-classification.herokuapp.com/). The first visit may take 30--60 seconds for the server to wake up and train the model.
+
+The [assignment specification](https://courses.cs.washington.edu/courses/cse143/20au/text-classifier/) ([spec.mhtml](spec.mhtml)) contains all of the information that students need to get started. To run the project locally, [download the code from GitHub]({{ site.github.repository_url }}) and implement (or stub) each required method in the `TextClassifier` class.
+
+Compile and run the `Main` class to compute the classifier's training accuracy.
+
+```java
+javac -cp ".:lib/*" Main.java && java -cp ".:lib/*" Main
+```
+
+Compile and run the `Server` class to launch the [Nifty Web App](https://kevinl.info/nifty-web-apps/).
+
+```java
+javac -cp ".:lib/*" Server.java && java -cp ".:lib/*" Server
+```
+
+A JUnit 5 `TextClassifierTest` class is provided, though it requires a `GoodTextClassifier` reference solution with a modified `print` method that returns the expected string result.
