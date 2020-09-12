@@ -46,7 +46,7 @@ Dependencies
 : There are no particular course content knowledge dependencies beyond their typical treatment in a programming-focused CS2 course. Some of the machine learning abstractions depend on [Smile (Statistical Machine Intelligence and Learning Engine)](https://haifengl.github.io/), a Java library for machine learning similar to [scikit-learn](https://scikit-learn.org/) for Python. 5MB of `jar` files need to be distributed alongside the source code.
 
 Variants
-: Rather than focus on data structures and algorithms, the assignment could instead focus on datasets and data representation. Instructors can also organize Kaggle competitions to give students exposure to the community and teamwork aspects involved in developing better machine learning algorithms. Rather than focus on programming, the assignment could instead focus on computer ethics and investigate [unintended bias in toxicity classification](https://www.kaggle.com/c/jigsaw-unintended-bias-in-toxicity-classification).
+: Rather than focus on data structures and algorithms, the assignment could instead focus on datasets and data representation. Instructors can also organize Kaggle competitions to give students exposure to the community and teamwork aspects involved in developing better machine learning algorithms. Rather than focus on programming, the assignment could instead focus on computer ethics by investigating [unintended bias in toxicity classification](https://www.kaggle.com/c/jigsaw-unintended-bias-in-toxicity-classification) and holistic approaches to addressing online harm such as [restorative justice](https://www.brookings.edu/techstream/the-promise-of-restorative-justice-in-addressing-online-harm/).
 
 ## Getting started
 
