@@ -12,7 +12,7 @@ Toxic comment classification is a special case of a more general problem in mach
 
 The simplest way to use the text classifier is through the [web app](https://toxicity-classification.herokuapp.com/). The first visit may take 30-60 seconds for the server to wake up and train the model.
 
-The [assignment specification](https://courses.cs.washington.edu/courses/cse143/20au/text-classifier/) ([spec.mhtml](docs/spec.mhtml)) contains all of the information that students need to get started. To run the project locally, download the code and implement (or stub) each required method in the `TextClassifier` class.
+The [assignment specification](https://courses.cs.washington.edu/courses/cse143/20au/text-classifier/) ([spec.mhtml](docs/spec.mhtml)) contains all of the information that students need to get started. To run the project locally, [download the code](https://github.com/kevinlin1/text-classifier/archive/master.zip) and implement (or stub) each required method in the `TextClassifier` class.
 
 Compile and run the `Main` class to compute the classifier's training accuracy.
 
