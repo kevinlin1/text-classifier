@@ -64,7 +64,7 @@ javac -cp ".:lib/*" Main.java && java -cp ".:lib/*" Main
 Compile and run the `Server` class to launch the [Nifty Web App](https://kevinl.info/nifty-web-apps/).
 
 ```java
-javac -cp ".:lib/*" Server.java && java -cp ".:lib/*" Server
+javac -cp ".:lib/*" Server.java && java -cp ".:lib/*" Server toxic.tsv
 ```
 
 A JUnit 5 `TextClassifierTest` class is provided, though it requires a `GoodTextClassifier` reference solution with a modified `print` method that returns the expected string result.
