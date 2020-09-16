@@ -15,7 +15,11 @@ public class Server {
     private static final int PORT = Integer.parseInt(System.getenv().getOrDefault("PORT", "8000"));
 
     public static void main(String[] args) throws IOException, URISyntaxException {
-        DataFrame df = Read.csv("toxic.tsv", CSVFormat.TDF.withHeader());
+        if (args.length != 1) {
+            throw new IllegalArgumentException("java Server [tsv file]");
+        }
+        String filename = args[0];
+        DataFrame df = Read.csv(filename, CSVFormat.TDF.withHeader());
         String[] corpus = df.stringVector("message").toStringArray();
         boolean[] labels = df.booleanVector("label").array();
         TextClassifier clf = TextClassifier.from(corpus, labels);
