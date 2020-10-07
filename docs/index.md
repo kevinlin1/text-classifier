@@ -48,6 +48,7 @@ Dependencies
 Variants
 : Rather than focus on data structures and algorithms, the assignment could instead focus on datasets and data representation. Instructors can also organize Kaggle competitions to give students exposure to the community and teamwork aspects involved in developing better machine learning algorithms.
 : Rather than focus on programming, the assignment could instead focus on computer ethics by investigating [unintended bias in toxicity classification](https://www.kaggle.com/c/jigsaw-unintended-bias-in-toxicity-classification) and holistic approaches to addressing online harm such as [restorative justice](https://www.brookings.edu/techstream/the-promise-of-restorative-justice-in-addressing-online-harm/).
+: Rather than assume that the solution to the problem of toxicity involves introducing a machine learning (or even computational) model, the assignment could discuss the broader ecology of the system such as [Squadbox](https://homes.cs.washington.edu/~axz/pub_details.html?id=squadbox): A Tool to Combat Email Harassment Using Friendsourced Moderation. Sometimes, the better solution is one that is not purely computational.
 
 ## Getting started
 
