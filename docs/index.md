@@ -32,7 +32,7 @@ Audience
 : A second programming course (CS2), a data structures course, or a machine learning course.
 
 Difficulty
-: While the assignment is motivated by a hard problem in natural language processing (NLP, a subfield of machine learning), it focuses on programming 4 fundamental binary search tree operations that can be solved by applying programming problem solving templates taught in class. We provide CS2 students all of the NLP and machine learning concepts as abstractions.
+: The assignment as presented in CS2 focuses on 4 fundamental binary search tree operations: construction, search, traversal, and removal. These can be solved by applying programming templates taught in class. We provide students all of the NLP and machine learning concepts as abstractions.
 
 Strengths
 : Text classification explores a **social implication of computing** since students learn how programming can address (but not fully solve) real-world problems that have been at the center of popular attention. The assignment touches on the limits of computing by pointing out how algorithms are ultimately dependent on the given data.
