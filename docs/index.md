@@ -43,7 +43,7 @@ Weaknesses
 : The provided abstractions allow students to focus on programming the decision tree data structure by hiding all of the machine learning implementation. While students can interact with the dataset, students likely won't feel that they understand everything about the assignment compared to something they write entirely on their own.
 
 Dependencies
-: There are no particular course content knowledge dependencies beyond their typical treatment in a programming-focused CS2 course. Some of the machine learning abstractions depend on [Smile (Statistical Machine Intelligence and Learning Engine)](https://haifengl.github.io/), a Java library for machine learning similar to [scikit-learn](https://scikit-learn.org/) for Python. 5MB of `jar` files need to be distributed alongside the source code.
+: Beyond the typical treatment of the binary trees in a programming-focused CS2 course, instructors may want to formally introduce decision trees, splitting, pruning, and vectorization beyond the information provided in the sample assignment specification. In terms of software dependencies, the machine learning abstractions depend on 5MB of `jar` files from the [Smile](https://haifengl.github.io/) project.
 
 Variants
 : Rather than focus on data structures and algorithms, the assignment could instead focus on datasets and data representation. Instructors can also organize Kaggle competitions to give students exposure to the community and teamwork aspects involved in developing better machine learning algorithms.
