@@ -47,22 +47,24 @@ public class TextClassifierTest {
         public String toString() {
             return filename;
         }
-
-        public int size() {
-            return corpus.length;
-        }
-
-        public Executable testClassify(int i) {
-            return () -> assertEquals(gclf.classify(corpus[i]), clf.classify(corpus[i]), corpus[i]);
-        }
     }
 
     @ParameterizedTest
     @DisplayName("classify")
     @Order(1)
-    @EnumSource
-    public void testClassify(Source src) {
-        assertAll(IntStream.range(0, src.size()).mapToObj(src::testClassify));
+    @MethodSource("classifyProvider")
+    public void testClassify(Source src, String text) {
+        assertEquals(src.gclf.classify(text), src.clf.classify(text));
+    }
+
+    static Stream<Arguments> classifyProvider() {
+        Stream.Builder<Arguments> result = Stream.builder();
+        for (Source src : Source.values()) {
+            for (String text : src.corpus) {
+                result.add(Arguments.of(src, text));
+            }
+        }
+        return result.build();
     }
 
     @ParameterizedTest
