@@ -39,8 +39,8 @@ public class TextClassifierTest {
                 this.clf = new TextClassifier(vectorizer, splitter);
                 this.gclf = new GoodTextClassifier(vectorizer, splitter);
                 this.filename = filename;
-            } catch (IOException | URISyntaxException e) {
-                throw new ExceptionInInitializerError();
+            } catch (Exception e) {
+                System.exit(1); // Because unit tests won't be able to run
             }
         }
 
