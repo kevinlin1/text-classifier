@@ -1,143 +1,166 @@
 From: <Saved by Blink>
 Snapshot-Content-Location: http://localhost:8000/courses/cse143/20au/text-classifier/
 Subject: Text Classifier | CSE 143
-Date: Wed, 16 Sep 2020 19:06:06 -0000
+Date: Wed, 21 Oct 2020 18:31:46 -0000
 MIME-Version: 1.0
 Content-Type: multipart/related;
 	type="text/html";
-	boundary="----MultipartBoundary--w2MW5Vxov29tEuFXVMeA9mhirDpJ7HiFKTMj1jbyet----"
+	boundary="----MultipartBoundary--Suw64hUqjAGvswX25jefkUgA5ddqdMjs2RMKZAPWPQ----"
 
 
-------MultipartBoundary--w2MW5Vxov29tEuFXVMeA9mhirDpJ7HiFKTMj1jbyet----
+------MultipartBoundary--Suw64hUqjAGvswX25jefkUgA5ddqdMjs2RMKZAPWPQ----
 Content-Type: text/html
-Content-ID: <frame-8C18775464D2D3A0554544156D4ED118@mhtml.blink>
+Content-ID: <frame-DE16607539C1E35FA8EE26E61AA8D54B@mhtml.blink>
 Content-Transfer-Encoding: quoted-printable
 Content-Location: http://localhost:8000/courses/cse143/20au/text-classifier/
 
-<!DOCTYPE html><html lang=3D"en-US"><head><meta http-equiv=3D"Content-Type"=
- content=3D"text/html; charset=3DUTF-8"><meta http-equiv=3D"X-UA-Compatible=
-" content=3D"IE=3DEdge"><link rel=3D"shortcut icon" href=3D"http://localhos=
-t:8000/courses/cse143/20au/favicon.ico" type=3D"image/x-icon"><link rel=3D"=
-stylesheet" href=3D"http://localhost:8000/courses/cse143/20au/assets/css/ju=
-st-the-docs-default.css">  <meta name=3D"viewport" content=3D"width=3Ddevic=
-e-width, initial-scale=3D1"><title>Text Classifier | CSE 143</title><meta n=
-ame=3D"generator" content=3D"Jekyll v3.9.0"><meta property=3D"og:title" con=
-tent=3D"Text Classifier"><meta name=3D"author" content=3D"Kevin Lin"><meta =
-property=3D"og:locale" content=3D"en_US"><meta name=3D"description" content=
-=3D"Text Classifier"><meta property=3D"og:description" content=3D"Text Clas=
-sifier"><link rel=3D"canonical" href=3D"http://localhost:8000/courses/cse14=
-3/20au/text-classifier/"><meta property=3D"og:url" content=3D"http://localh=
-ost:8000/courses/cse143/20au/text-classifier/"><meta property=3D"og:site_na=
-me" content=3D"CSE 143"><meta property=3D"og:type" content=3D"article"><met=
-a property=3D"article:published_time" content=3D"2020-09-16T12:05:26-07:00"=
-><meta name=3D"google-site-verification" content=3D"QclY_1udbdKts462GzFHLmF=
-oaioICIQ16kjZumjRJIg"> </head><body> <svg xmlns=3D"http://www.w3.org/2000/s=
-vg" style=3D"display: none;"> <symbol id=3D"svg-link" viewBox=3D"0 0 24 24"=
-><title>Link</title><svg xmlns=3D"http://www.w3.org/2000/svg" width=3D"24" =
-height=3D"24" viewBox=3D"0 0 24 24" fill=3D"none" stroke=3D"currentColor" s=
-troke-width=3D"2" stroke-linecap=3D"round" stroke-linejoin=3D"round" class=
-=3D"feather feather-link"><path d=3D"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0=
--7.07-7.07l-1.72 1.71"></path><path d=3D"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5=
- 0 0 0 7.07 7.07l1.71-1.71"></path> </svg> </symbol> </svg><div id=3D"main-=
-content-wrap" class=3D"main-content-wrap"><div id=3D"main-content" class=3D=
-"main-content" role=3D"main"><h1 class=3D"no_toc mb-2" id=3D"text-classifie=
-r"> <a href=3D"http://localhost:8000/courses/cse143/20au/text-classifier/#t=
-ext-classifier" class=3D"anchor-heading"><svg viewBox=3D"0 0 16 16" aria-hi=
-dden=3D"true"><use xlink:href=3D"#svg-link"><template shadowmode=3D"closed"=
-><svg id=3D"svg-link" viewBox=3D"0 0 24 24"><title>Link</title><svg xmlns=
-=3D"http://www.w3.org/2000/svg" width=3D"24" height=3D"24" viewBox=3D"0 0 2=
-4 24" fill=3D"none" stroke=3D"currentColor" stroke-width=3D"2" stroke-linec=
-ap=3D"round" stroke-linejoin=3D"round" class=3D"feather feather-link"><path=
- d=3D"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><=
-path d=3D"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></p=
-ath> </svg> </svg></template></use></svg></a> Text Classifier</h1><p class=
-=3D"fs-6 fw-300">Implementing a decision tree data type for text classifica=
-tion.</p><p>Online abuse and harassment stops people from engaging in conve=
-rsation. One area of focus is the study of negative online behaviors, such =
-as <strong>toxic comments</strong>: user-written comments that are rude, di=
-srespectful or otherwise likely to make someone leave a discussion. Platfor=
-ms struggle to effectively facilitate conversations, leading many communiti=
-es to <a href=3D"https://meta.stackexchange.com/q/342779">limit</a> or <a h=
-ref=3D"https://en.wikipedia.org/wiki/R/The_Donald#Quarantine,_restriction,_=
-ban_and_successor">completely shut down</a> user comments. In 2018, the <a =
-href=3D"https://conversationai.github.io/">Conversation AI</a> team, a rese=
-arch initiative founded by <a href=3D"https://jigsaw.google.com/">Jigsaw</a=
-> and Google (both part of Alphabet), organized a public competition called=
- the <a href=3D"https://www.kaggle.com/c/jigsaw-toxic-comment-classificatio=
-n-challenge">Toxic Comment Classification Challenge</a> to build better mac=
-hine learning systems for detecting different types of of toxicity like thr=
-eats, obscenity, insults, and identity-based hate.<sup id=3D"fnref:1" role=
-=3D"doc-noteref"><a href=3D"http://localhost:8000/courses/cse143/20au/text-=
-classifier/#fn:1" class=3D"footnote">1</a></sup></p><p>Toxic comment classi=
-fication is a special case of a more general problem in machine learning kn=
-own as <strong>text classification</strong>. Discussion forums use text cla=
-ssification to determine whether comments should be flagged as inappropriat=
-e. Email software uses text classification to determine whether incoming ma=
-il is sent to the inbox or filtered into the spam folder.<sup id=3D"fnref:2=
-" role=3D"doc-noteref"><a href=3D"http://localhost:8000/courses/cse143/20au=
-/text-classifier/#fn:2" class=3D"footnote">2</a></sup></p><p><img src=3D"ht=
-tp://localhost:8000/courses/cse143/20au/assets/images/spam-classifier.png" =
-alt=3D"Spam email classifier"></p><dl><dt>Warning</dt><dd><p>Machine learni=
-ng models are trained on human-selected and human-generated datasets. Such =
-models encode and reproduce the implicit bias inherent in the datasets. Thi=
-s model is not meant to generalize beyond the toy training datasets. Don=E2=
-=80=99t use this in a real system!</p><p>The included vectorization algorit=
-hms also encode explicit bias. The vectorization ignores all grammar and sy=
-ntax, treating each occurrence of a word as independent from all other word=
-s in the text. Any usage of a word, no matter the context, is considered eq=
-ually toxic or spammy.</p><p>The provided datasets contain text that may be=
- considered profane, vulgar, or offensive.</p></dd></dl><h2 id=3D"specifica=
-tion"> <a href=3D"http://localhost:8000/courses/cse143/20au/text-classifier=
-/#specification" class=3D"anchor-heading"><svg viewBox=3D"0 0 16 16" aria-h=
-idden=3D"true"><use xlink:href=3D"#svg-link"><template shadowmode=3D"closed=
-"><svg id=3D"svg-link" viewBox=3D"0 0 24 24"><title>Link</title><svg xmlns=
-=3D"http://www.w3.org/2000/svg" width=3D"24" height=3D"24" viewBox=3D"0 0 2=
-4 24" fill=3D"none" stroke=3D"currentColor" stroke-width=3D"2" stroke-linec=
-ap=3D"round" stroke-linejoin=3D"round" class=3D"feather feather-link"><path=
- d=3D"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><=
-path d=3D"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></p=
-ath> </svg> </svg></template></use></svg></a> Specification</h2><p>Implemen=
-t a <code class=3D"language-plaintext highlighter-rouge">TextClassifier</co=
-de> data type, a binary classification tree for text documents.</p><dl><dt>=
-<code class=3D"language-plaintext highlighter-rouge">TextClassifier(Vectori=
-zer vectorizer, Splitter splitter)</code></dt><dd>Constructs a new <code cl=
-ass=3D"language-plaintext highlighter-rouge">TextClassifier</code> given a =
-fitted <code class=3D"language-plaintext highlighter-rouge">vectorizer</cod=
-e> for transforming data points and a <code class=3D"language-plaintext hig=
-hlighter-rouge">splitter</code> for determining the splits in the tree.</dd=
-><dt><code class=3D"language-plaintext highlighter-rouge">boolean classify(=
-String text)</code></dt><dd>Returns a boolean representing the predicted la=
-bel for the given <code class=3D"language-plaintext highlighter-rouge">text=
-</code>.</dd><dt><code class=3D"language-plaintext highlighter-rouge">void =
-print()</code></dt><dd>Prints a Java code representation of this tree in if=
-/else statement format with proper braces and indentation, 1 space per inde=
-nt level. Leaf nodes should print =E2=80=9Creturn true;=E2=80=9D or =E2=80=
-=9Creturn false;=E2=80=9D depending on the label value.</dd><dt><code class=
-=3D"language-plaintext highlighter-rouge">void prune(int depth)</code></dt>=
-<dd>Prunes this tree to the given <code class=3D"language-plaintext highlig=
-hter-rouge">depth</code>. Each pruned subtree is replaced with a new node w=
-ith the subtree=E2=80=99s majority label.</dd></dl><p>Three helper classes =
-are provided to interface between the binary tree data structure and the da=
-ta representation of the <code class=3D"language-plaintext highlighter-roug=
-e">TextClassifier</code>. The most useful methods are described below.</p><=
-h3 id=3D"splitter"> <a href=3D"http://localhost:8000/courses/cse143/20au/te=
-xt-classifier/#splitter" class=3D"anchor-heading"><svg viewBox=3D"0 0 16 16=
-" aria-hidden=3D"true"><use xlink:href=3D"#svg-link"><template shadowmode=
-=3D"closed"><svg id=3D"svg-link" viewBox=3D"0 0 24 24"><title>Link</title><=
-svg xmlns=3D"http://www.w3.org/2000/svg" width=3D"24" height=3D"24" viewBox=
-=3D"0 0 24 24" fill=3D"none" stroke=3D"currentColor" stroke-width=3D"2" str=
-oke-linecap=3D"round" stroke-linejoin=3D"round" class=3D"feather feather-li=
-nk"><path d=3D"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"=
-></path><path d=3D"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-=
-1.71"></path> </svg> </svg></template></use></svg></a> Splitter</h3><p>The =
-<code class=3D"language-plaintext highlighter-rouge">Splitter</code> class =
-computes the best split of the data into left and right subsets.</p><dl><dt=
-><code class=3D"language-plaintext highlighter-rouge">Splitter.Result split=
-()</code></dt><dd>Returns the best split and the left and right splitters, =
-or null if no good split exists.</dd><dt><code class=3D"language-plaintext =
-highlighter-rouge">boolean label()</code></dt><dd>Returns the majority labe=
-l for this splitter.</dd></dl><h3 id=3D"split"> <a href=3D"http://localhost=
-:8000/courses/cse143/20au/text-classifier/#split" class=3D"anchor-heading">=
+<!DOCTYPE html><html lang=3D"en-US" class=3D"js-focus-visible" data-js-focu=
+s-visible=3D""><head><meta http-equiv=3D"Content-Type" content=3D"text/html=
+; charset=3DUTF-8"><link rel=3D"stylesheet" type=3D"text/css" href=3D"cid:c=
+ss-785e6410-7030-4888-841f-0e1759e220b7@mhtml.blink" /><meta http-equiv=3D"=
+X-UA-Compatible" content=3D"IE=3DEdge"><link rel=3D"shortcut icon" href=3D"=
+http://localhost:8000/courses/cse143/20au/favicon.ico" type=3D"image/x-icon=
+"><link rel=3D"stylesheet" href=3D"http://localhost:8000/courses/cse143/20a=
+u/assets/css/just-the-docs-default.css">  <meta name=3D"viewport" content=
+=3D"width=3Ddevice-width, initial-scale=3D1"><title>Text Classifier | CSE 1=
+43</title><meta name=3D"generator" content=3D"Jekyll v3.9.0"><meta property=
+=3D"og:title" content=3D"Text Classifier"><meta name=3D"author" content=3D"=
+Kevin Lin"><meta property=3D"og:locale" content=3D"en_US"><meta name=3D"des=
+cription" content=3D"Text Classifier"><meta property=3D"og:description" con=
+tent=3D"Text Classifier"><link rel=3D"canonical" href=3D"http://localhost:8=
+000/courses/cse143/20au/text-classifier/"><meta property=3D"og:url" content=
+=3D"http://localhost:8000/courses/cse143/20au/text-classifier/"><meta prope=
+rty=3D"og:site_name" content=3D"CSE 143"><meta property=3D"og:type" content=
+=3D"article"><meta property=3D"article:published_time" content=3D"2020-10-2=
+1T11:31:46-07:00"><meta name=3D"google-site-verification" content=3D"QclY_1=
+udbdKts462GzFHLmFoaioICIQ16kjZumjRJIg"> </head><body> <svg xmlns=3D"http://=
+www.w3.org/2000/svg" style=3D"display: none;"> <symbol id=3D"svg-link" view=
+Box=3D"0 0 24 24"><title>Link</title><svg xmlns=3D"http://www.w3.org/2000/s=
+vg" width=3D"24" height=3D"24" viewBox=3D"0 0 24 24" fill=3D"none" stroke=
+=3D"currentColor" stroke-width=3D"2" stroke-linecap=3D"round" stroke-linejo=
+in=3D"round" class=3D"feather feather-link"><path d=3D"M10 13a5 5 0 0 0 7.5=
+4.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d=3D"M14 11a5 5 0 0 0=
+-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path> </svg> </symbol> </sv=
+g><div id=3D"main-content-wrap" class=3D"main-content-wrap"><div id=3D"main=
+-content" class=3D"main-content" role=3D"main"><h1 class=3D"no_toc mb-2" id=
+=3D"text-classifier"> <a href=3D"http://localhost:8000/courses/cse143/20au/=
+text-classifier/#text-classifier" class=3D"anchor-heading"><svg viewBox=3D"=
+0 0 16 16" aria-hidden=3D"true"><use xlink:href=3D"#svg-link"><template sha=
+dowmode=3D"closed"><svg id=3D"svg-link" viewBox=3D"0 0 24 24"><title>Link</=
+title><svg xmlns=3D"http://www.w3.org/2000/svg" width=3D"24" height=3D"24" =
+viewBox=3D"0 0 24 24" fill=3D"none" stroke=3D"currentColor" stroke-width=3D=
+"2" stroke-linecap=3D"round" stroke-linejoin=3D"round" class=3D"feather fea=
+ther-link"><path d=3D"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.7=
+2 1.71"></path><path d=3D"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.0=
+7l1.71-1.71"></path> </svg> </svg></template></use></svg></a> Text Classifi=
+er</h1><p class=3D"fs-6 fw-300">Implementing a decision tree data type for =
+text classification.</p><p>Online abuse and harassment stops people from en=
+gaging in conversation. One area of focus is the study of negative online b=
+ehaviors, such as <strong>toxic comments</strong>: user-written comments th=
+at are rude, disrespectful or otherwise likely to make someone leave a disc=
+ussion. Platforms struggle to effectively facilitate conversations, leading=
+ many communities to <a href=3D"https://meta.stackexchange.com/q/342779">li=
+mit</a> or <a href=3D"https://en.wikipedia.org/wiki/R/The_Donald#Quarantine=
+,_restriction,_ban_and_successor">completely shut down</a> user comments. I=
+n 2018, the <a href=3D"https://conversationai.github.io/">Conversation AI</=
+a> team, a research initiative founded by <a href=3D"https://jigsaw.google.=
+com/">Jigsaw</a> and Google (both part of Alphabet), organized a public com=
+petition called the <a href=3D"https://www.kaggle.com/c/jigsaw-toxic-commen=
+t-classification-challenge">Toxic Comment Classification Challenge</a> to b=
+uild better machine learning systems for detecting different types of of to=
+xicity like threats, obscenity, insults, and identity-based hate.</p><dl><d=
+t>Warning</dt><dd><p>Machine learning models are trained on human-selected =
+and human-generated datasets. Such models reproduce the bias inherent in th=
+e data. The included data representation algorithms also encode overly-simp=
+listic assumptions about natural language by treating each occurrence of a =
+word as independent from all other words in the text. Any usage of a word, =
+no matter the context, is considered equally toxic. Don=E2=80=99t use this =
+in a real system!</p><p>When the Conversation AI team first built toxicity =
+models, they found that the models <a href=3D"https://medium.com/the-false-=
+positive/unintended-bias-and-names-of-frequently-targeted-groups-8e0b81f80a=
+23">incorrectly learned to associate</a> the names of frequently attacked i=
+dentities with toxicity. In 2019, the Conversation AI team ran another comp=
+etition about <a href=3D"https://www.kaggle.com/c/jigsaw-unintended-bias-in=
+-toxicity-classification">Unintended Bias in Toxicity Classification</a>, f=
+ocusing on building models that detect toxicity across a range of diverse c=
+onversations.</p><p>The provided datasets contain text that may be consider=
+ed profane, vulgar, or offensive.</p></dd></dl><p>Toxic comment classificat=
+ion is a special case of a more general problem in machine learning known a=
+s <strong>text classification</strong>. Discussion forums use text classifi=
+cation to determine whether comments should be flagged as inappropriate. Em=
+ail software uses text classification to determine whether incoming mail is=
+ sent to the inbox or filtered into the spam folder.<sup id=3D"fnref:1" rol=
+e=3D"doc-noteref"><a href=3D"http://localhost:8000/courses/cse143/20au/text=
+-classifier/#fn:1" class=3D"footnote">1</a></sup></p><p><img src=3D"http://=
+localhost:8000/courses/cse143/20au/assets/images/spam-classifier.png" alt=
+=3D"Spam email classifier"></p><h2 id=3D"specification"> <a href=3D"http://=
+localhost:8000/courses/cse143/20au/text-classifier/#specification" class=3D=
+"anchor-heading"><svg viewBox=3D"0 0 16 16" aria-hidden=3D"true"><use xlink=
+:href=3D"#svg-link"><template shadowmode=3D"closed"><svg id=3D"svg-link" vi=
+ewBox=3D"0 0 24 24"><title>Link</title><svg xmlns=3D"http://www.w3.org/2000=
+/svg" width=3D"24" height=3D"24" viewBox=3D"0 0 24 24" fill=3D"none" stroke=
+=3D"currentColor" stroke-width=3D"2" stroke-linecap=3D"round" stroke-linejo=
+in=3D"round" class=3D"feather feather-link"><path d=3D"M10 13a5 5 0 0 0 7.5=
+4.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d=3D"M14 11a5 5 0 0 0=
+-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path> </svg> </svg></templa=
+te></use></svg></a> Specification</h2><p>Implement a <code class=3D"languag=
+e-plaintext highlighter-rouge">TextClassifier</code> data type, a binary cl=
+assification tree for text documents.</p><dl><dt><code class=3D"language-pl=
+aintext highlighter-rouge">TextClassifier(Vectorizer vectorizer, Splitter s=
+plitter)</code></dt><dd>Constructs a new <code class=3D"language-plaintext =
+highlighter-rouge">TextClassifier</code> given a fitted <code class=3D"lang=
+uage-plaintext highlighter-rouge">vectorizer</code> for transforming data p=
+oints and a <code class=3D"language-plaintext highlighter-rouge">splitter</=
+code> for determining the splits in the tree.</dd><dt><code class=3D"langua=
+ge-plaintext highlighter-rouge">boolean classify(String text)</code></dt><d=
+d>Returns a boolean representing the predicted label for the given <code cl=
+ass=3D"language-plaintext highlighter-rouge">text</code>.</dd><dt><code cla=
+ss=3D"language-plaintext highlighter-rouge">void print()</code></dt><dd>Pri=
+nts a Java code representation of this tree in if/else statement format wit=
+h proper braces and indentation, 1 space per indent level. Leaf nodes shoul=
+d print =E2=80=9Creturn true;=E2=80=9D or =E2=80=9Creturn false;=E2=80=9D d=
+epending on the label value.</dd><dt><code class=3D"language-plaintext high=
+lighter-rouge">void prune(int depth)</code></dt><dd>Prunes this tree to the=
+ given <code class=3D"language-plaintext highlighter-rouge">depth</code>. E=
+ach pruned subtree is replaced with a new node with the subtree=E2=80=99s m=
+ajority label.</dd></dl><p>Three helper classes are provided to interface b=
+etween the binary tree data structure and the data representation of the <c=
+ode class=3D"language-plaintext highlighter-rouge">TextClassifier</code>. T=
+he most useful methods are described below.</p><h3 id=3D"splitter"> <a href=
+=3D"http://localhost:8000/courses/cse143/20au/text-classifier/#splitter" cl=
+ass=3D"anchor-heading"><svg viewBox=3D"0 0 16 16" aria-hidden=3D"true"><use=
+ xlink:href=3D"#svg-link"><template shadowmode=3D"closed"><svg id=3D"svg-li=
+nk" viewBox=3D"0 0 24 24"><title>Link</title><svg xmlns=3D"http://www.w3.or=
+g/2000/svg" width=3D"24" height=3D"24" viewBox=3D"0 0 24 24" fill=3D"none" =
+stroke=3D"currentColor" stroke-width=3D"2" stroke-linecap=3D"round" stroke-=
+linejoin=3D"round" class=3D"feather feather-link"><path d=3D"M10 13a5 5 0 0=
+ 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d=3D"M14 11a5 5=
+ 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path> </svg> </svg></=
+template></use></svg></a> Splitter</h3><p>The <code class=3D"language-plain=
+text highlighter-rouge">Splitter</code> class computes the best split of th=
+e data into left and right halves.</p><dl><dt><code class=3D"language-plain=
+text highlighter-rouge">Splitter.Result split()</code></dt><dd>Returns the =
+best split and the left and right splitters, or null if no good split exist=
+s.</dd><dt><code class=3D"language-plaintext highlighter-rouge">boolean lab=
+el()</code></dt><dd>Returns the majority label for this splitter.</dd></dl>=
+<h3 id=3D"split"> <a href=3D"http://localhost:8000/courses/cse143/20au/text=
+-classifier/#split" class=3D"anchor-heading"><svg viewBox=3D"0 0 16 16" ari=
+a-hidden=3D"true"><use xlink:href=3D"#svg-link"><template shadowmode=3D"clo=
+sed"><svg id=3D"svg-link" viewBox=3D"0 0 24 24"><title>Link</title><svg xml=
+ns=3D"http://www.w3.org/2000/svg" width=3D"24" height=3D"24" viewBox=3D"0 0=
+ 24 24" fill=3D"none" stroke=3D"currentColor" stroke-width=3D"2" stroke-lin=
+ecap=3D"round" stroke-linejoin=3D"round" class=3D"feather feather-link"><pa=
+th d=3D"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path=
+><path d=3D"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"><=
+/path> </svg> </svg></template></use></svg></a> Split</h3><p>The <code clas=
+s=3D"language-plaintext highlighter-rouge">Split</code> class represents a =
+decision rule for splitting vector data.</p><dl><dt><code class=3D"language=
+-plaintext highlighter-rouge">boolean goLeft(double[] vector)</code></dt><d=
+d>Returns true if and only if the given vector lies to the left of this dec=
+ision rule.</dd><dt><code class=3D"language-plaintext highlighter-rouge">St=
+ring toString()</code></dt><dd>Returns a string representation of this deci=
+sion rule.</dd></dl><h3 id=3D"vectorizer"> <a href=3D"http://localhost:8000=
+/courses/cse143/20au/text-classifier/#vectorizer" class=3D"anchor-heading">=
 <svg viewBox=3D"0 0 16 16" aria-hidden=3D"true"><use xlink:href=3D"#svg-lin=
 k"><template shadowmode=3D"closed"><svg id=3D"svg-link" viewBox=3D"0 0 24 2=
 4"><title>Link</title><svg xmlns=3D"http://www.w3.org/2000/svg" width=3D"24=
@@ -146,60 +169,43 @@ k"><template shadowmode=3D"closed"><svg id=3D"svg-link" viewBox=3D"0 0 24 2=
 s=3D"feather feather-link"><path d=3D"M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 =
 0-7.07-7.07l-1.72 1.71"></path><path d=3D"M14 11a5 5 0 0 0-7.54-.54l-3 3a5 =
 5 0 0 0 7.07 7.07l1.71-1.71"></path> </svg> </svg></template></use></svg></=
-a> Split</h3><p>The <code class=3D"language-plaintext highlighter-rouge">Sp=
-lit</code> class represents a decision rule for splitting vector data.</p><=
-dl><dt><code class=3D"language-plaintext highlighter-rouge">boolean goLeft(=
-double[] vector)</code></dt><dd>Returns true if and only if the given vecto=
-r lies to the left of this decision rule.</dd><dt><code class=3D"language-p=
-laintext highlighter-rouge">String toString()</code></dt><dd>Returns a stri=
-ng representation of this decision rule.</dd></dl><h3 id=3D"vectorizer"> <a=
- href=3D"http://localhost:8000/courses/cse143/20au/text-classifier/#vectori=
-zer" class=3D"anchor-heading"><svg viewBox=3D"0 0 16 16" aria-hidden=3D"tru=
-e"><use xlink:href=3D"#svg-link"><template shadowmode=3D"closed"><svg id=3D=
-"svg-link" viewBox=3D"0 0 24 24"><title>Link</title><svg xmlns=3D"http://ww=
-w.w3.org/2000/svg" width=3D"24" height=3D"24" viewBox=3D"0 0 24 24" fill=3D=
-"none" stroke=3D"currentColor" stroke-width=3D"2" stroke-linecap=3D"round" =
-stroke-linejoin=3D"round" class=3D"feather feather-link"><path d=3D"M10 13a=
-5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d=3D"M14=
- 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path> </svg> <=
-/svg></template></use></svg></a> Vectorizer</h3><p>The <code class=3D"langu=
-age-plaintext highlighter-rouge">Vectorizer</code> interface defines data r=
-epresentation algorithms transforming English text into <code class=3D"lang=
-uage-plaintext highlighter-rouge">double[][]</code> matrices for the <code =
-class=3D"language-plaintext highlighter-rouge">Splitter</code> class.</p><d=
-l><dt><code class=3D"language-plaintext highlighter-rouge">double[][] trans=
-form(String... texts)</code></dt><dd>Returns the design matrix for the give=
-n texts. Given a single <code class=3D"language-plaintext highlighter-rouge=
-">text</code>, <code class=3D"language-plaintext highlighter-rouge">transfo=
-rm(text)[0]</code> evaluates to a <code class=3D"language-plaintext highlig=
-hter-rouge">double[] vector</code> that can be passed to <code class=3D"lan=
-guage-plaintext highlighter-rouge">Split.goLeft</code>.</dd></dl><p>The <co=
-de class=3D"language-plaintext highlighter-rouge">TextClassifier.from</code=
-> method creates a <code class=3D"language-plaintext highlighter-rouge">Spl=
-itter</code> and a <code class=3D"language-plaintext highlighter-rouge">BM2=
-5Vectorizer</code>. We also provide an optional <code class=3D"language-pla=
-intext highlighter-rouge">LSAVectorizer</code> that improves the accuracy o=
-f the model but requires more processing power.</p><details> <summary>Optio=
-nally, learn how to run LSAVectorizer from your computer terminal.</summary=
-><p>Make sure that you have JDK 11 or later installed on your system and ac=
-cessible from the terminal. Download and unzip your assessment workspace fr=
-om Ed. You=E2=80=99ll also need to download and unzip a copy of the <a href=
-=3D"https://haifengl.github.io/">Statistical Machine Intelligence and Learn=
-ing Engine</a> library for Java. We built the program for <a href=3D"https:=
-//github.com/haifengl/smile/releases/download/v2.5.2/smile-2.5.2.zip">smile=
--2.5.2.zip</a>. Copy the <code class=3D"language-plaintext highlighter-roug=
-e">lib</code> directory containing all of the <code class=3D"language-plain=
-text highlighter-rouge">jar</code> files into your project.</p><p>To use th=
-e <code class=3D"language-plaintext highlighter-rouge">LSAVectorizer</code>=
-, modify the <code class=3D"language-plaintext highlighter-rouge">from</cod=
-e> method to construct a new <code class=3D"language-plaintext highlighter-=
-rouge">LSAVectorizer</code>. Then, navigate to your project directory in th=
-e terminal and compile and run the <code class=3D"language-plaintext highli=
-ghter-rouge">Main</code> class with the <code class=3D"language-plaintext h=
-ighlighter-rouge">lib</code> directory in the classpath.</p><div class=3D"l=
-anguage-sh highlighter-rouge"><div class=3D"highlight"><pre class=3D"highli=
-ght"><code>javac <span class=3D"nt">-cp</span> <span class=3D"s2">".:lib/*"=
-</span> Main.java
+a> Vectorizer</h3><p>The <code class=3D"language-plaintext highlighter-roug=
+e">Vectorizer</code> interface defines data representation algorithms trans=
+forming English text into <code class=3D"language-plaintext highlighter-rou=
+ge">double[][]</code> matrices for the <code class=3D"language-plaintext hi=
+ghlighter-rouge">Splitter</code> class.</p><dl><dt><code class=3D"language-=
+plaintext highlighter-rouge">double[][] transform(String... texts)</code></=
+dt><dd>Returns the design matrix for the given texts. Given a single <code =
+class=3D"language-plaintext highlighter-rouge">text</code>, <code class=3D"=
+language-plaintext highlighter-rouge">transform(text)[0]</code> evaluates t=
+o a <code class=3D"language-plaintext highlighter-rouge">double[] vector</c=
+ode> that can be passed to <code class=3D"language-plaintext highlighter-ro=
+uge">Split.goLeft</code>.</dd></dl><p>The <code class=3D"language-plaintext=
+ highlighter-rouge">TextClassifier.from</code> method creates a <code class=
+=3D"language-plaintext highlighter-rouge">Splitter</code> and a <code class=
+=3D"language-plaintext highlighter-rouge">BM25Vectorizer</code>. We also pr=
+ovide an optional <code class=3D"language-plaintext highlighter-rouge">LSAV=
+ectorizer</code> that improves the accuracy of the model but requires more =
+processing power.</p><details> <summary>Optionally, learn how to run LSAVec=
+torizer from your computer terminal.</summary><p>Make sure that you have JD=
+K 11 or later installed on your system and accessible from the terminal. Do=
+wnload and unzip your assessment workspace from Ed. You=E2=80=99ll also nee=
+d to download and unzip a copy of the <a href=3D"https://haifengl.github.io=
+/">Statistical Machine Intelligence and Learning Engine</a> library for Jav=
+a. We built the program for <a href=3D"https://github.com/haifengl/smile/re=
+leases/download/v2.5.2/smile-2.5.2.zip">smile-2.5.2.zip</a>. Copy the <code=
+ class=3D"language-plaintext highlighter-rouge">lib</code> directory contai=
+ning all of the <code class=3D"language-plaintext highlighter-rouge">jar</c=
+ode> files into your project.</p><p>To use the <code class=3D"language-plai=
+ntext highlighter-rouge">LSAVectorizer</code>, modify the <code class=3D"la=
+nguage-plaintext highlighter-rouge">from</code> method to construct a new <=
+code class=3D"language-plaintext highlighter-rouge">LSAVectorizer</code>. T=
+hen, navigate to your project directory in the terminal and compile and run=
+ the <code class=3D"language-plaintext highlighter-rouge">Main</code> class=
+ with the <code class=3D"language-plaintext highlighter-rouge">lib</code> d=
+irectory in the classpath.</p><div class=3D"language-sh highlighter-rouge">=
+<div class=3D"highlight"><pre class=3D"highlight"><code>javac <span class=
+=3D"nt">-cp</span> <span class=3D"s2">".:lib/*"</span> Main.java
 java <span class=3D"nt">-cp</span> <span class=3D"s2">".:lib/*"</span> Main
 </code></pre></div></div></details><h2 id=3D"web-app"> <a href=3D"http://lo=
 calhost:8000/courses/cse143/20au/text-classifier/#web-app" class=3D"anchor-=
@@ -252,117 +258,130 @@ uctors when designing a node class. For example, including unused construct=
 ors, missing helpful constructors that eliminate redundancy, or not having =
 a fitting constructor for a reoccuring type of node.</dd></dl><div class=3D=
 "footnotes" role=3D"doc-endnotes"><ol><li id=3D"fn:1" role=3D"doc-endnote">=
-<p>When the Conversation AI team first built toxicity models, they found th=
-at the models <a href=3D"https://medium.com/the-false-positive/unintended-b=
-ias-and-names-of-frequently-targeted-groups-8e0b81f80a23">incorrectly learn=
-ed to associate</a> the names of frequently attacked identities with toxici=
-ty. In 2019, the Conversation AI team ran another competition about <a href=
-=3D"https://www.kaggle.com/c/jigsaw-unintended-bias-in-toxicity-classificat=
-ion">Unintended Bias in Toxicity Classification</a>, focusing on building m=
-odels that detect toxicity across a range of diverse conversations.&nbsp;<a=
- href=3D"http://localhost:8000/courses/cse143/20au/text-classifier/#fnref:1=
-" class=3D"reversefootnote" role=3D"doc-backlink">=E2=86=A9</a></p></li><li=
- id=3D"fn:2" role=3D"doc-endnote"><p>Google Developers. Oct 1, 2018. Text c=
-lassification. In Machine Learning Guides. <a href=3D"https://developers.go=
-ogle.com/machine-learning/guides/text-classification">https://developers.go=
-ogle.com/machine-learning/guides/text-classification</a>&nbsp;<a href=3D"ht=
-tp://localhost:8000/courses/cse143/20au/text-classifier/#fnref:2" class=3D"=
-reversefootnote" role=3D"doc-backlink">=E2=86=A9</a></p></li></ol></div></d=
-iv></div>
-</body></html>
-------MultipartBoundary--w2MW5Vxov29tEuFXVMeA9mhirDpJ7HiFKTMj1jbyet----
+<p>Google Developers. Oct 1, 2018. Text classification. In Machine Learning=
+ Guides. <a href=3D"https://developers.google.com/machine-learning/guides/t=
+ext-classification">https://developers.google.com/machine-learning/guides/t=
+ext-classification</a>&nbsp;<a href=3D"http://localhost:8000/courses/cse143=
+/20au/text-classifier/#fnref:1" class=3D"reversefootnote" role=3D"doc-backl=
+ink">=E2=86=A9</a></p></li></ol></div></div></div>
+</body><loom-container id=3D"lo-engage-ext-container"><div></div><loom-shad=
+ow classname=3D"resolved"><template shadowmode=3D"open"><span><loom-shadow-=
+inner id=3D"lo-engage-ext-container"><loom-container></loom-container></loo=
+m-shadow-inner></span></template></loom-shadow></loom-container></html>
+------MultipartBoundary--Suw64hUqjAGvswX25jefkUgA5ddqdMjs2RMKZAPWPQ----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-785e6410-7030-4888-841f-0e1759e220b7@mhtml.blink
+
+@charset "utf-8";
+
+@font-face { font-weight: 400; font-style: normal; font-family: Inter-Loom;=
+ src: url("https://cdn.loom.com/assets/fonts/inter/Inter-UI-Regular.woff2")=
+ format("woff2"); }
+
+@font-face { font-weight: 400; font-style: italic; font-family: Inter-Loom;=
+ src: url("https://cdn.loom.com/assets/fonts/inter/Inter-UI-Italic.woff2") =
+format("woff2"); }
+
+@font-face { font-weight: 500; font-style: normal; font-family: Inter-Loom;=
+ src: url("https://cdn.loom.com/assets/fonts/inter/Inter-UI-Medium.woff2") =
+format("woff2"); }
+
+@font-face { font-weight: 500; font-style: italic; font-family: Inter-Loom;=
+ src: url("https://cdn.loom.com/assets/fonts/inter/Inter-UI-MediumItalic.wo=
+ff2") format("woff2"); }
+
+@font-face { font-weight: 700; font-style: normal; font-family: Inter-Loom;=
+ src: url("https://cdn.loom.com/assets/fonts/inter/Inter-UI-Bold.woff2") fo=
+rmat("woff2"); }
+
+@font-face { font-weight: 700; font-style: italic; font-family: Inter-Loom;=
+ src: url("https://cdn.loom.com/assets/fonts/inter/Inter-UI-BoldItalic.woff=
+2") format("woff2"); }
+
+@font-face { font-weight: 900; font-style: normal; font-family: Inter-Loom;=
+ src: url("https://cdn.loom.com/assets/fonts/inter/Inter-UI-Black.woff2") f=
+ormat("woff2"); }
+
+@font-face { font-weight: 900; font-style: italic; font-family: Inter-Loom;=
+ src: url("https://cdn.loom.com/assets/fonts/inter/Inter-UI-BlackItalic.wof=
+f2") format("woff2"); }
+------MultipartBoundary--Suw64hUqjAGvswX25jefkUgA5ddqdMjs2RMKZAPWPQ----
 Content-Type: text/css
 Content-Transfer-Encoding: quoted-printable
 Content-Location: http://localhost:8000/courses/cse143/20au/assets/css/just-the-docs-default.css
 
 @charset "utf-8";
 
-html { font-family: sans-serif; text-size-adjust: 100%; }
+html { line-height: 1.15; text-size-adjust: 100%; }
 
 body { margin: 0px; }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, main, =
-menu, nav, section, summary { display: block; }
-
-audio, canvas, progress, video { display: inline-block; vertical-align: bas=
-eline; }
-
-audio:not([controls]) { display: none; height: 0px; }
-
-[hidden], template { display: none; }
-
-a { background-color: transparent; }
-
-a:active, a:hover { outline: 0px; }
-
-abbr[title] { border-bottom: 1px dotted; }
-
-b, strong { font-weight: bold; }
-
-dfn { font-style: italic; }
+main { display: block; }
 
 h1 { font-size: 2em; margin: 0.67em 0px; }
 
-mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+hr { box-sizing: content-box; height: 0px; overflow: visible; }
+
+pre { font-family: monospace, monospace; font-size: 1em; }
+
+a { background-color: transparent; }
+
+abbr[title] { border-bottom: none; text-decoration: underline dotted; }
+
+b, strong { font-weight: bolder; }
+
+code, kbd, samp { font-family: monospace, monospace; font-size: 1em; }
 
 small { font-size: 80%; }
 
 sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-ali=
 gn: baseline; }
 
-sup { top: -0.5em; }
-
 sub { bottom: -0.25em; }
 
-img { border: 0px; }
+sup { top: -0.5em; }
 
-svg:not(:root) { overflow: hidden; }
+img { border-style: none; }
 
-figure { margin: 1em 40px; }
+button, input, optgroup, select, textarea { font-family: inherit; font-size=
+: 100%; line-height: 1.15; margin: 0px; }
 
-hr { box-sizing: content-box; height: 0px; }
-
-pre { overflow: auto; }
-
-code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
-
-button, input, optgroup, select, textarea { color: inherit; font: inherit; =
-margin: 0px; }
-
-button { overflow: visible; }
+button, input { overflow: visible; }
 
 button, select { text-transform: none; }
 
-button, html input[type=3D"button"], input[type=3D"reset"], input[type=3D"s=
-ubmit"] { appearance: button; cursor: pointer; }
+button, [type=3D"button"], [type=3D"reset"], [type=3D"submit"] { appearance=
+: button; }
 
-button[disabled], html input[disabled] { cursor: default; }
+fieldset { padding: 0.35em 0.75em 0.625em; }
 
-input { line-height: normal; }
+legend { box-sizing: border-box; color: inherit; display: table; max-width:=
+ 100%; padding: 0px; white-space: normal; }
 
-input[type=3D"checkbox"], input[type=3D"radio"] { box-sizing: border-box; p=
-adding: 0px; }
-
-input[type=3D"number"]::-webkit-inner-spin-button, input[type=3D"number"]::=
--webkit-outer-spin-button { height: auto; }
-
-input[type=3D"search"] { appearance: textfield; box-sizing: content-box; }
-
-input[type=3D"search"]::-webkit-search-cancel-button, input[type=3D"search"=
-]::-webkit-search-decoration { appearance: none; }
-
-fieldset { border: 1px solid rgb(192, 192, 192); margin: 0px 2px; padding: =
-0.35em 0.625em 0.75em; }
-
-legend { border: 0px; padding: 0px; }
+progress { vertical-align: baseline; }
 
 textarea { overflow: auto; }
 
-optgroup { font-weight: bold; }
+[type=3D"checkbox"], [type=3D"radio"] { box-sizing: border-box; padding: 0p=
+x; }
 
-table { border-collapse: collapse; border-spacing: 0px; }
+[type=3D"number"]::-webkit-inner-spin-button, [type=3D"number"]::-webkit-ou=
+ter-spin-button { height: auto; }
 
-td, th { padding: 0px; }
+[type=3D"search"] { appearance: textfield; outline-offset: -2px; }
+
+[type=3D"search"]::-webkit-search-decoration { appearance: none; }
+
+::-webkit-file-upload-button { appearance: button; font: inherit; }
+
+details { display: block; }
+
+summary { display: list-item; }
+
+template { display: none; }
+
+[hidden] { display: none; }
 
 * { box-sizing: border-box; }
 
@@ -591,6 +610,22 @@ ht; }
 .main-content dd { grid-column: 2 / auto; margin-bottom: 0px; margin-left: =
 1em; }
 
+.main-content dd blockquote:first-child, .main-content dd div:first-child, =
+.main-content dd dl:first-child, .main-content dd dt:first-child, .main-con=
+tent dd h1:first-child, .main-content dd h2:first-child, .main-content dd h=
+3:first-child, .main-content dd h4:first-child, .main-content dd h5:first-c=
+hild, .main-content dd h6:first-child, .main-content dd li:first-child, .ma=
+in-content dd ol:first-child, .main-content dd p:first-child, .main-content=
+ dd pre:first-child, .main-content dd table:first-child, .main-content dd u=
+l:first-child, .main-content dd .table-wrapper:first-child { margin-top: 0p=
+x; }
+
+.main-content dd dl:first-child dt:first-child, .main-content dd dl:first-c=
+hild dd:nth-child(2), .main-content ol dl:first-child dt:first-child, .main=
+-content ol dl:first-child dd:nth-child(2), .main-content ul dl:first-child=
+ dt:first-child, .main-content ul dl:first-child dd:nth-child(2) { margin-t=
+op: 0px; }
+
 .main-content .anchor-heading { position: absolute; right: -1rem; width: 1.=
 5rem; height: 100%; padding-right: 0.25rem; padding-left: 0.25rem; overflow=
 : visible; }
@@ -761,12 +796,10 @@ h2, .text-beta { font-size: 18px !important; }
   h2, .text-beta { line-height: 1.25; font-size: 24px !important; }
 }
 
-h3, .text-gamma, .main-content .module h1, .main-content .module h2, .modul=
-e h1, .module h2 { font-size: 16px !important; }
+h3, .text-gamma { font-size: 16px !important; }
 
 @media (min-width: 31.25rem) {
-  h3, .text-gamma, .main-content .module h1, .main-content .module h2, .mod=
-ule h1, .module h2 { font-size: 18px !important; }
+  h3, .text-gamma { font-size: 18px !important; }
 }
 
 h4, .text-delta { font-weight: 400; text-transform: uppercase; letter-spaci=
@@ -1152,9 +1185,11 @@ thead th { border-bottom: 1px solid rgb(238, 235, 238); }
 code { padding: 0.2em 0.15em; font-weight: 400; background-color: rgb(245, =
 246, 250); border: 1px solid rgb(238, 235, 238); border-radius: 4px; }
 
+a:visited code { border-color: rgb(238, 235, 238); }
+
 div.highlighter-rouge { padding: 0.75rem; margin-top: 0px; margin-bottom: 0=
-.75rem; background-color: rgb(245, 246, 250); border-radius: 4px; box-shado=
-w: none; }
+.75rem; overflow-x: auto; background-color: rgb(245, 246, 250); border-radi=
+us: 4px; box-shadow: none; }
 
 div.highlighter-rouge div.highlight, div.highlighter-rouge pre.highlight, d=
 iv.highlighter-rouge code { padding: 0px; margin: 0px; border: 0px; }
@@ -3622,8 +3657,8 @@ in-header { display: none !important; }
 
 .main-content .module, .module { box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 3p=
 x, rgba(0, 0, 0, 0.05) 0px 4px 14px; margin: 1rem -1rem; display: flex; fle=
-x-direction: column; min-width: 0px; padding: 0.5rem 1rem 0px; position: re=
-lative; overflow-wrap: break-word; }
+x-direction: column; min-width: 0px; padding: 0px 1rem; position: relative;=
+ overflow-wrap: break-word; }
 
 @media (min-width: 50rem) {
   .main-content .module, .module { border-radius: 4px; margin: 1rem 0px; }
@@ -3639,9 +3674,19 @@ none !important; }
 er-pronouns, .module div.highlighter-rouge[overlay]::after { border-radius:=
  4px; margin-left: 0px; user-select: none; }
 
+.main-content .module h1:first-child, .main-content .module h2:first-child,=
+ .main-content .module h3:first-child, .main-content .module h4:first-child=
+, .main-content .module h5:first-child, .main-content .module h6:first-chil=
+d, .module h1:first-child, .module h2:first-child, .module h3:first-child, =
+.module h4:first-child, .module h5:first-child, .module h6:first-child { ma=
+rgin-top: 1rem; }
+
 .main-content .module > dl, .module > dl { border-bottom: 1px solid rgb(238=
 , 235, 238); border-top: 1px solid rgb(238, 235, 238); display: grid; grid-=
 template-columns: max-content 1fr; margin: 0.5rem -1rem; }
+
+.main-content .module > dl:first-child, .module > dl:first-child { margin-t=
+op: 0px; }
 
 .main-content .module > dl:last-child, .module > dl:last-child { margin-bot=
 tom: 0px; }
@@ -3755,7 +3800,7 @@ pect-ratio)) + (var(--add-height))); }
   [style*=3D"--aspect-ratio"] > :first-child { position: absolute; top: 0px=
 ; left: 0px; height: 100%; }
 }
-------MultipartBoundary--w2MW5Vxov29tEuFXVMeA9mhirDpJ7HiFKTMj1jbyet----
+------MultipartBoundary--Suw64hUqjAGvswX25jefkUgA5ddqdMjs2RMKZAPWPQ----
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Location: http://localhost:8000/courses/cse143/20au/assets/images/spam-classifier.png
@@ -4967,4 +5012,4 @@ gL/t17EAAAAAwCB/62HsKYsAvBcAAAA+3gsAAID3AgAAgPcCAACA9wIAAID3AgAAgPcCAACA9wIA
 AID3AgAA4L0AAADgvQAAAOC9AAAA4L0AAADgvQAAAOC9AAAA4L0AAAB4LwAAAHgvAAAAeC8AAAB4
 LwAAAHgvAAAAeC8AAAAEx7ewjmIY28oAAAAASUVORK5CYII=
 
-------MultipartBoundary--w2MW5Vxov29tEuFXVMeA9mhirDpJ7HiFKTMj1jbyet------
+------MultipartBoundary--Suw64hUqjAGvswX25jefkUgA5ddqdMjs2RMKZAPWPQ------
