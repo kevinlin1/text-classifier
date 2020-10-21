@@ -35,20 +35,23 @@ Difficulty
 : The assignment as presented in CS2 focuses on 4 fundamental binary search tree operations: construction, search, traversal, and removal. These can be solved by applying programming templates taught in class. We provide students all of the NLP and machine learning concepts as abstractions.
 
 Strengths
-: Text classification explores a **social implication of computing** since students learn how programming can address (but not fully solve) real-world problems that have been at the center of popular attention. The assignment touches on the limits of computing by pointing out how algorithms are ultimately dependent on the given data.
-: Students can run the **bundled web app** and test their decision tree classifier on any text in realtime. Web apps are uniquely authentic and engaging since students can see their code served beyond their computer screen and accessible to anyone online. Students can also host their web app for free online.
+: Text classification explores a **social implication of computing** since students learn how programming can address (but not fully solve) real-world problems that have been at the center of popular attention. The assignment touches on the limits of computing by pointing out how algorithms are ultimately dependent on the given data.[^2]
+: Students can run the **bundled web app** and test their decision tree classifier on any text in realtime. Web apps are uniquely authentic and engaging since students can see their code served beyond their computer screen and accessible to anyone online. Students can also host their web app for free online.[^3]
 : The provided abstractions allow instructors to **customize learning objectives**. We focus on data structures and algorithms, but other courses can flip the abstractions: instructors can provide the decision tree as an abstraction so that students can focus on implementing the machine learning components.
+
+[^2]: Amy J. Ko, Alannah Oleson, Neil Ryan, Yim Register, Benjamin Xie, Mina Tari, Matthew Davidson, Stefania Druga, Dastyni Loksa. 2020. It Is Time for More Critical CS Education. Commun. ACM 63, 11 (November 2020), 30--32. <https://doi.org/10.1145/3424000>
+[^3]: Kevin Lin, Sumant Guha, Joe Spaniac, Andy Zheng. 2020. Nifty Web Apps: Build a Web App for Any Text-Based Programming Assignment. In Proceedings of the 52nd ACM Technical Symposium on Computer Science Education (SIGCSE '21). <https://arxiv.org/abs/2010.04671>
 
 Weaknesses
 : The provided abstractions allow students to focus on programming the decision tree data structure by hiding all of the machine learning implementation. While students can interact with the dataset, students likely won't feel that they understand everything about the assignment compared to something they write entirely on their own.
 
 Dependencies
-: Beyond the typical treatment of the binary trees in a programming-focused CS2 course, instructors may want to formally introduce decision trees, splitting, pruning, and vectorization beyond the information provided in the sample assignment specification. In terms of software dependencies, the machine learning abstractions depend on 5MB of `jar` files from the [Smile](https://haifengl.github.io/) project.
+: Beyond the typical treatment of the binary trees in a programming-focused CS2 course, instructors may want to formally introduce decision trees, splitting, pruning, and vectorization. (A basic description is provided in the sample assignment specification.) In terms of software dependencies, the machine learning abstractions depend on 5MB of `jar` files from the [Smile](https://haifengl.github.io/) project.
 
 Variants
 : Rather than focus on data structures and algorithms, the assignment could instead focus on datasets and data representation. Instructors can also organize Kaggle competitions to give students exposure to the community and teamwork aspects involved in developing better machine learning algorithms.
 : Rather than focus on programming, the assignment could instead focus on computer ethics by investigating [unintended bias in toxicity classification](https://www.kaggle.com/c/jigsaw-unintended-bias-in-toxicity-classification) and holistic approaches to addressing online harm such as [restorative justice](https://www.brookings.edu/techstream/the-promise-of-restorative-justice-in-addressing-online-harm/).
-: Rather than assume that the solution to the problem of toxicity involves introducing a machine learning (or even computational) model, the assignment could discuss the broader ecology of the system such as [Squadbox](https://homes.cs.washington.edu/~axz/pub_details.html?id=squadbox): A Tool to Combat Email Harassment Using Friendsourced Moderation. Sometimes, the better solution is one that is not purely computational.
+: Rather than assume that the solution to the problem of toxicity involves introducing a machine learning (or even computational) model, the assignment could discuss the broader ecology of the system such as [Squadbox: A Tool to Combat Email Harassment Using Friendsourced Moderation](https://homes.cs.washington.edu/~axz/pub_details.html?id=squadbox). We can teach about the limits of computing and data.[^2]
 
 ## Getting started
 
