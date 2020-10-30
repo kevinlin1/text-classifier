@@ -131,16 +131,14 @@ public class Splitter {
         // Returns the best split in this feature.
         public BestSplit best() {
             BestSplit best = BestSplit.empty();
-            int countTrue = 0;
-            int i = 0;
-            // Incrementally compute impurity for each split by keeping count of the true labels.
             for (Split proposed : splits) {
-                for (; i < matrix.length && proposed.goLeft(matrix[i]); i += 1) {
-                    if (labels[i]) {
-                        countTrue += 1;
+                int countCorrectSplit = 0;
+                for (int i = 0; i < size(); i += 1) {
+                    if (labels[i] && proposed.goLeft(matrix[i])) {
+                        countCorrectSplit += 1;
                     }
                 }
-                double gain = impurity - splitImpurity(countTrue);
+                double gain = impurity - splitImpurity(countCorrectSplit);
                 if (gain > best.gain) {
                     best.update(proposed, gain);
                 }
