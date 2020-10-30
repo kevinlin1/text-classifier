@@ -39,8 +39,8 @@ Strengths
 : Students can run the **bundled web app** and test their decision tree classifier on any text in realtime. Web apps are uniquely authentic and engaging since students can see their code served beyond their computer screen and accessible to anyone online. Students can also host their web app for free online.[^3]
 : The provided abstractions allow instructors to **customize learning objectives**. We focus on data structures and algorithms, but other courses can flip the abstractions: instructors can provide the decision tree as an abstraction so that students can focus on implementing the machine learning components.
 
-[^2]: Amy J. Ko, Alannah Oleson, Neil Ryan, Yim Register, Benjamin Xie, Mina Tari, Matthew Davidson, Stefania Druga, Dastyni Loksa. 2020. It Is Time for More Critical CS Education. Commun. ACM 63, 11 (November 2020), 30--32. <https://doi.org/10.1145/3424000>
-[^3]: Kevin Lin, Sumant Guha, Joe Spaniac, Andy Zheng. 2020. Nifty Web Apps: Build a Web App for Any Text-Based Programming Assignment. In Proceedings of the 52nd ACM Technical Symposium on Computer Science Education (SIGCSE '21). <https://arxiv.org/abs/2010.04671>
+[^2]: Amy J. Ko, Alannah Oleson, Neil Ryan, Yim Register, Benjamin Xie, Mina Tari, Matthew Davidson, Stefania Druga, and Dastyni Loksa. 2020. It is time for more critical CS education. Commun. ACM 63, 11 (November 2020), 31--33. <https://doi.org/10.1145/3424000>
+[^3]: Kevin Lin, Sumant Guha, Joe Spaniac, and Andy Zheng. 2020. Nifty Web Apps: Build a Web App for Any Text-Based Programming Assignment. In Proceedings of the 52nd ACM Technical Symposium on Computer Science Education (SIGCSE '21). <https://doi.org/10.1145/3408877.3432580>
 
 Weaknesses
 : The provided abstractions allow students to focus on programming the decision tree data structure by hiding all of the machine learning implementation. While students can interact with the dataset, students likely won't feel that they understand everything about the assignment compared to something they write entirely on their own.
