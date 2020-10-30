@@ -92,7 +92,7 @@ public class Splitter {
 
     // Returns a new Splitter containing only data where indices are true for the given predicate.
     private Splitter mask(IntPredicate predicate) {
-        int[] indices = IntStream.range(0, matrix.length).filter(predicate).toArray();
+        int[] indices = IntStream.range(0, size()).filter(predicate).toArray();
         double[][] newMatrix = new double[indices.length][];
         boolean[] newLabels = new boolean[indices.length];
         for (int i = 0; i < indices.length; i += 1) {
@@ -104,7 +104,7 @@ public class Splitter {
 
     // Returns an array of all possible feature splits for each matrix variable.
     private FeatureSplit[] featureSplits() {
-        int m = matrix.length;
+        int m = size();
         int n = matrix[0].length;
         FeatureSplit[] result = new FeatureSplit[n];
         for (int j = 0; j < n; j += 1) {
