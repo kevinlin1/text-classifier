@@ -11,36 +11,35 @@ import java.net.*;
 import java.util.*;
 import java.util.stream.*;
 
-import org.apache.commons.csv.*;
-
-import smile.data.*;
-import smile.io.*;
-
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class TextClassifierTest {
 
     public enum Source {
-        SPAM("spam.tsv", CSVFormat.TDF.withHeader()),
-        TOXIC("toxic.tsv", CSVFormat.TDF.withHeader()),
-        TINY("tiny.tsv", CSVFormat.TDF.withHeader());
+        SPAM("spam.tsv", 5000), TOXIC("toxic.tsv", 5000), TINY("tiny.tsv", 10);
 
         private final String[] corpus;
         private final TextClassifier clf;
         private final GoodTextClassifier gclf;
         private final String filename;
 
-        private Source(String filename, CSVFormat format) {
-            try {
-                DataFrame df = Read.csv(filename, format);
-                this.corpus = df.stringVector("message").toStringArray();
-                boolean[] labels = df.booleanVector("label").array();
+        private Source(String filename, int N) {
+            try (Scanner input = new Scanner(new File(filename))) {
+                input.nextLine(); // Skip header
+                boolean[] labels = new boolean[N];
+                this.corpus = new String[N];
+                for (int i = 0; i < N; i += 1) {
+                    Scanner line = new Scanner(input.nextLine()).useDelimiter("\t");
+                    labels[i] = line.nextBoolean();
+                    corpus[i] = line.next();
+                }
                 Vectorizer vectorizer = new BM25Vectorizer();
-                Splitter splitter = new Splitter(vectorizer.fitTransform(corpus), labels);
+                Splitter splitter = new GiniSplitter(vectorizer.fitTransform(corpus), labels);
                 this.clf = new TextClassifier(vectorizer, splitter);
                 this.gclf = new GoodTextClassifier(vectorizer, splitter);
                 this.filename = filename;
             } catch (Exception e) {
                 System.exit(1); // Because unit tests won't be able to run
+                throw new ExceptionInInitializerError();
             }
         }
 
@@ -82,10 +81,22 @@ public class TextClassifierTest {
     @Order(3)
     @EnumSource
     @CaptureSystemOutput
-    public void testPrintAfterPrune(Source src, CaptureSystemOutput.OutputCapture out) {
+    public void testPrintAfterPrune10(Source src, CaptureSystemOutput.OutputCapture out) {
         src.gclf.prune(10);
         out.expect(equalTo(src.gclf.print()));
         src.clf.prune(10);
+        src.clf.print();
+    }
+
+    @ParameterizedTest
+    @DisplayName("print after prune(5)")
+    @Order(4)
+    @EnumSource
+    @CaptureSystemOutput
+    public void testPrintAfterPrune5(Source src, CaptureSystemOutput.OutputCapture out) {
+        src.gclf.prune(5);
+        out.expect(equalTo(src.gclf.print()));
+        src.clf.prune(5);
         src.clf.print();
     }
 }

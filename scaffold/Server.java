@@ -5,11 +5,6 @@ import java.nio.file.*;
 
 import com.sun.net.httpserver.*;
 
-import org.apache.commons.csv.*;
-
-import smile.data.*;
-import smile.io.*;
-
 public class Server {
     // Port number used to connect to this server
     private static final int PORT = Integer.parseInt(System.getenv().getOrDefault("PORT", "8000"));
@@ -19,10 +14,19 @@ public class Server {
             throw new IllegalArgumentException("java Server [tsv file]");
         }
         String filename = args[0];
-        DataFrame df = Read.csv(filename, CSVFormat.TDF.withHeader());
-        String[] corpus = df.stringVector("message").toStringArray();
-        boolean[] labels = df.booleanVector("label").array();
-        TextClassifier clf = TextClassifier.from(corpus, labels);
+        int N = 5000;
+        boolean[] labels = new boolean[N];
+        String[] corpus = new String[N];
+        Scanner input = new Scanner(new File(filename));
+        input.nextLine(); // Skip header
+        for (int i = 0; i < N; i += 1) {
+            Scanner line = new Scanner(input.nextLine()).useDelimiter("\t");
+            labels[i] = line.nextBoolean();
+            corpus[i] = line.next();
+        }
+        Vectorizer vectorizer = new BM25Vectorizer();
+        Splitter splitter = new GiniSplitter(vectorizer.fitTransform(corpus), labels);
+        TextClassifier clf = new TextClassifier(vectorizer, splitter);
         HttpServer server = HttpServer.create(new InetSocketAddress(PORT), 0);
         server.createContext("/", (HttpExchange t) -> {
             String html = Files.readString(Paths.get("index.html"));
