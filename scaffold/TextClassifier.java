@@ -45,7 +45,7 @@ public class TextClassifier {
             corpus[i] = line.next();
         }
 
-        Vectorizer vectorizer = new BM25Vectorizer();
+        Vectorizer vectorizer = new Vectorizer();
         Splitter splitter = new GiniSplitter(vectorizer.fitTransform(corpus), labels);
         TextClassifier clf = new TextClassifier(vectorizer, splitter);
         clf.print();
