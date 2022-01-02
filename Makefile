@@ -1,9 +1,9 @@
 output = lin-text-classifier
 
 submit: clean
-	cd docs/; bundle install; bundle exec jekyll build
+	bundle install; bundle exec jekyll build
 	mkdir -p $(output)
-	cp -r docs/_site/* $(output)
+	cp -r _site/* $(output)
 	sed -i 's/"\/text-classifier\//"/g' $(output)/index.html
 	cp -r scaffold/ $(output)
 	zip $(output).zip -r -9 $(output)

@@ -10,6 +10,6 @@ github:
   license:
     name: MIT
   source:
-    branch: "master"
-    path: "/docs"
+    branch: "main"
+    path: "/"
   repository_url: "https://github.com/kevinlin1/text-classifier"
