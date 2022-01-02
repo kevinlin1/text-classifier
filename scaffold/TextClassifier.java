@@ -33,11 +33,15 @@ public class TextClassifier {
     }
 
     public static void main(String[] args) throws IOException {
+        if (args.length != 1) {
+            throw new IllegalArgumentException("java TextClassifier [tsv file]");
+        }
+        String filename = args[0];
         int N = 5000;
         boolean[] labels = new boolean[N];
         String[] corpus = new String[N];
 
-        Scanner input = new Scanner(new File("toxic.tsv"));
+        Scanner input = new Scanner(new File(filename));
         input.nextLine(); // Skip header
         for (int i = 0; i < N; i += 1) {
             Scanner line = new Scanner(input.nextLine()).useDelimiter("\t");
