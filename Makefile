@@ -1,6 +1,6 @@
 output = lin-text-classifier
 
-nifty: clean
+submit: clean
 	cd docs/; bundle install; bundle exec jekyll build
 	mkdir -p $(output)
 	cp -r docs/_site/* $(output)
