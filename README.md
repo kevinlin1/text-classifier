@@ -66,7 +66,7 @@ This is a very simple approach, so it's easy for spammers to get around this by 
 
 ### `TextClassifier(Vectorizer vectorizer, Splitter splitter)`
 
-Constructs a new `TextClassifier` given a fitted `vectorizer` for transforming data points and a `splitter` for determining the splits in the tree. In other words, construct a tree with the given parameters where each `Node` in the tree represents a split in the data.
+Constructs a new `TextClassifier` given a `splitter` for determining the splits in the tree. In other words, construct a tree with the given parameters where each `Node` in the tree represents a split in the data. The constructor also takes a `vectorizer`, but it's only used for implementing another method, `classify`, so all you have to do for now is save the `vectorizer` as a field in your tree.
 
 We've done something similar before in section using a `Scanner` instead of a `Splitter`.[^4] Just like how the values returned from each call to the `Scanner` defined the shape of the binary tree, the values returned from each call to the `Splitter` will define the shape of the decision tree. To use the `Splitter`, first call `Splitter.split()` to get a `Splitter.Result`.
 
