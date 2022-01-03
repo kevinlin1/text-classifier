@@ -10,7 +10,7 @@ Online abuse and harassment stops people from engaging in conversation. One area
 
 Toxic comment classification is a special case of a more general problem in machine learning known as **text classification**. Discussion forums use text classification to determine whether comments should be flagged as inappropriate. Email software uses text classification to determine whether incoming mail is sent to the inbox or filtered into the spam folder.[^1]
 
-![Spam email classifier](spam-classifier.png)
+![Spam email classifier](assets/images/spam-classifier.png)
 
 [^1]: Google Developers. Oct 1, 2018. Text classification. In Machine Learning Guides. <https://developers.google.com/machine-learning/guides/text-classification>
 
@@ -124,7 +124,7 @@ Returns a boolean representing the predicted label for the given `text` by recur
 
 Prints a Java code representation of this decision tree in if/else statement format without braces and with 1 additional indentation space per level in the decision tree. Leaf nodes should print "return true;" or "return false;" depending on the label value. For the example tree shown below, we've given the result of calling `print()` with extra comments pointing out each indentation level corresponding to each level in the tree.
 
-![Example tree with maximum depth 2](classifier-2-levels.png)
+![Example tree with maximum depth 2](assets/images/classifier-2-levels.png)
 
 ```java
 if (vector[318] <= 5.273602694890837)
@@ -143,7 +143,7 @@ else
 
 Prunes this tree to the given `depth`. Each pruned subtree is replaced with a new node representing the subtree's majority label. For example, pruning the above decision tree to depth 1 would result in the following structure after calling `print()`. Don't forget to use the `x = change(x)` pattern.
 
-![Example tree pruned to depth 1](classifier-1-level.png)
+![Example tree pruned to depth 1](assets/images/classifier-1-level.png)
 
 ```java
 if (vector[318] <= 5.273602694890837)
