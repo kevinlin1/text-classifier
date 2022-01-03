@@ -1,4 +1,4 @@
-output = lin-text-classifier
+output = materials
 
 submit: clean
 	bundle install; bundle exec jekyll build
