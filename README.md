@@ -173,3 +173,7 @@ javac Server.java && java Server toxic.tsv; rm *.class
 ```
 
 Then, open your browser and navigate to <https://localhost:8000>.
+
+## License
+
+<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Text Classifier</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://kevinl.info/" property="cc:attributionName" rel="cc:attributionURL">Kevin Lin</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
