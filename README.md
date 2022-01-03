@@ -160,7 +160,7 @@ else
 
 > **Instructors**: A JUnit 5 `TextClassifierTest` integration test suite is provided with hard-coded expected results. Contact the authors for a copy of the solution class. The integration tests provide a basic check on the behavior of the code, but the feedback that is offered is quite limited so we recommend designing other feedback or support mechanisms for students.
 
-To check the classifier's training accuracy, open your terminal, paste the following command, and press <kbd>Enter</kbd>
+To run the classifier and print a 10-level pruned tree, open your terminal, paste the following command, and press <kbd>Enter</kbd>
 
 ```sh
 javac TextClassifier.java && java TextClassifier toxic.tsv; rm *.class
