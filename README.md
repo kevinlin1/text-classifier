@@ -159,7 +159,7 @@ else
 To check the classifier's training accuracy, open your terminal, paste the following command, and press <kbd>Enter</kbd>
 
 ```sh
-javac TextClassifier.java && java TextClassifier; rm *.class
+javac TextClassifier.java && java TextClassifier toxic.tsv; rm *.class
 ```
 
 To launch the web app, open your terminal, paste the following command, and press <kbd>Enter</kbd>
