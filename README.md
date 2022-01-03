@@ -126,7 +126,7 @@ Returns a boolean representing the predicted label for the given `text` by recur
 
 ### `void print()`
 
-Prints a Java code representation of this decision tree in if/else statement format without braces and with 1 additional indentation space per level in the decision tree. Leaf nodes should print "return true;" or "return false;" depending on the label value. For the example tree shown below, we've given the result of calling `print()` with extra comments pointing out each indentation level corresponding to each level in the tree.
+Prints a Java code representation of this decision tree in if/else statement format without braces and with 1 additional indentation space per level in the decision tree. Leaf nodes should print "return true;" or "return false;" depending on the label value. For the example tree shown below, we've given the result of calling `print()`.
 
 ![Example tree with maximum depth 2](assets/images/classifier-2-levels.png)
 
