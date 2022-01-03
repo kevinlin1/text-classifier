@@ -1,0 +1,34 @@
+if (vector[355] <= 3.753656756784596)
+ if (vector[134] <= 3.325906414915756)
+  if (vector[145] <= 4.859006683701708)
+   if (vector[992] <= 3.9937811978919484)
+    if (vector[251] <= 2.9766860611348602)
+     return false;
+    else
+     return false;
+   else
+    if (vector[992] <= 4.7889546628934765)
+     return false;
+    else
+     return false;
+  else
+   if (vector[145] <= 6.750112470536148)
+    return true;
+   else
+    if (vector[145] <= 7.70876516523642)
+     return false;
+    else
+     return true;
+ else
+  if (vector[134] <= 3.9206579637883596)
+   return false;
+  else
+   if (vector[134] <= 3.9359181772892544)
+    return false;
+   else
+    if (vector[134] <= 3.9790085867662706)
+     return false;
+    else
+     return false;
+else
+ return true;

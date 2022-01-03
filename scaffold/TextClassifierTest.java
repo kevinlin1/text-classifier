@@ -1,46 +1,51 @@
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.function.*;
 import org.junit.jupiter.params.*;
 import org.junit.jupiter.params.provider.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-import static org.hamcrest.core.IsEqual.equalTo;
-
 import java.io.*;
-import java.net.*;
 import java.util.*;
-import java.util.stream.*;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class TextClassifierTest {
 
     public enum Source {
-        SPAM("spam.tsv", 5000), TOXIC("toxic.tsv", 5000), TINY("tiny.tsv", 10);
+        SPAM("spam.tsv"), TOXIC("toxic.tsv"), TINY("tiny.tsv");
 
-        private final String[] corpus;
+        private final String[] messages;
         private final TextClassifier clf;
-        private final GoodTextClassifier gclf;
         private final String filename;
 
-        private Source(String filename, int N) {
-            try (Scanner input = new Scanner(new File(filename))) {
+        private Source(String filename) {
+            File file = new File(filename);
+            int N = 0;
+            try (Scanner input = new Scanner(file)) {
                 input.nextLine(); // Skip header
-                boolean[] labels = new boolean[N];
-                this.corpus = new String[N];
-                for (int i = 0; i < N; i += 1) {
-                    Scanner line = new Scanner(input.nextLine()).useDelimiter("\t");
-                    labels[i] = line.nextBoolean();
-                    corpus[i] = line.next();
+                while (input.hasNextLine()) {
+                    N += 1;
+                    input.nextLine();
                 }
-                Vectorizer vectorizer = new BM25Vectorizer();
-                Splitter splitter = new GiniSplitter(vectorizer.fitTransform(corpus), labels);
-                this.clf = new TextClassifier(vectorizer, splitter);
-                this.gclf = new GoodTextClassifier(vectorizer, splitter);
-                this.filename = filename;
-            } catch (Exception e) {
+            } catch (IOException e) {
                 System.exit(1); // Because unit tests won't be able to run
                 throw new ExceptionInInitializerError();
             }
+            boolean[] labels = new boolean[N];
+            this.messages = new String[N];
+            try (Scanner input = new Scanner(file)) {
+                input.nextLine(); // Skip header
+                for (int i = 0; i < N; i += 1) {
+                    Scanner line = new Scanner(input.nextLine()).useDelimiter("\t");
+                    labels[i] = line.nextBoolean();
+                    this.messages[i] = line.next();
+                }
+            } catch (IOException e) {
+                System.exit(1); // Because unit tests won't be able to run
+                throw new ExceptionInInitializerError();
+            }
+            Vectorizer vectorizer = new Vectorizer();
+            Splitter splitter = new GiniSplitter(vectorizer.fitTransform(this.messages), labels);
+            this.clf = new TextClassifier(vectorizer, splitter);
+            this.filename = filename;
         }
 
         public String toString() {
@@ -51,52 +56,96 @@ public class TextClassifierTest {
     @ParameterizedTest
     @DisplayName("classify")
     @Order(1)
-    @MethodSource("classifyProvider")
-    public void testClassify(Source src, String text) {
-        assertEquals(src.gclf.classify(text), src.clf.classify(text));
-    }
-
-    static Stream<Arguments> classifyProvider() {
-        Stream.Builder<Arguments> result = Stream.builder();
-        for (Source src : Source.values()) {
-            for (String text : src.corpus) {
-                result.add(Arguments.of(src, text));
-            }
+    @EnumSource
+    public void testClassify(Source src) throws IOException {
+        Scanner input = new Scanner(new File(src.filename + ".test1.txt"));
+        String expected = input.useDelimiter("\\A").next();
+        StringBuilder builder = new StringBuilder();
+        for (String text : src.messages) {
+            builder.append(src.clf.classify(text));
+            builder.append('\n');
         }
-        return result.build();
+        assertEquals(expected, builder.toString());
     }
 
     @ParameterizedTest
     @DisplayName("print")
     @Order(2)
     @EnumSource
-    @CaptureSystemOutput
-    public void testPrint(Source src, CaptureSystemOutput.OutputCapture out) {
-        out.expect(equalTo(src.gclf.print()));
+    public void testPrint(Source src) throws IOException {
+        Scanner input = new Scanner(new File(src.filename + ".test2.txt"));
+        String expected = input.useDelimiter("\\A").next();
+        ByteArrayOutputStream b = new ByteArrayOutputStream();
+        PrintStream old = System.out;
+        System.setOut(new PrintStream(b));
+
         src.clf.print();
+
+        System.out.flush();
+        System.setOut(old);
+        assertEquals(expected, b.toString());
     }
 
     @ParameterizedTest
     @DisplayName("print after prune(10)")
     @Order(3)
     @EnumSource
-    @CaptureSystemOutput
-    public void testPrintAfterPrune10(Source src, CaptureSystemOutput.OutputCapture out) {
-        src.gclf.prune(10);
-        out.expect(equalTo(src.gclf.print()));
+    public void testPrintAfterPrune10(Source src) throws IOException {
+        Scanner input = new Scanner(new File(src.filename + ".test3.txt"));
+        String expected = input.useDelimiter("\\A").next();
+        ByteArrayOutputStream b = new ByteArrayOutputStream();
+        PrintStream old = System.out;
+        System.setOut(new PrintStream(b));
+
         src.clf.prune(10);
         src.clf.print();
+
+        System.out.flush();
+        System.setOut(old);
+        assertEquals(expected, b.toString());
     }
 
     @ParameterizedTest
     @DisplayName("print after prune(5)")
     @Order(4)
     @EnumSource
-    @CaptureSystemOutput
-    public void testPrintAfterPrune5(Source src, CaptureSystemOutput.OutputCapture out) {
-        src.gclf.prune(5);
-        out.expect(equalTo(src.gclf.print()));
+    public void testPrintAfterPrune5(Source src) throws IOException {
+        Scanner input = new Scanner(new File(src.filename + ".test4.txt"));
+        String expected = input.useDelimiter("\\A").next();
+        ByteArrayOutputStream b = new ByteArrayOutputStream();
+        PrintStream old = System.out;
+        System.setOut(new PrintStream(b));
+
         src.clf.prune(5);
         src.clf.print();
+
+        System.out.flush();
+        System.setOut(old);
+        assertEquals(expected, b.toString());
+    }
+
+    // Dump solution class output to text files.
+    public static void main(String[] args) throws FileNotFoundException {
+        for (Source src : Source.values()) {
+            System.setOut(new PrintStream(new FileOutputStream(src.filename + ".test1.txt")));
+            for (String text : src.messages) {
+                System.out.println(src.clf.classify(text));
+            }
+            System.out.flush();
+
+            System.setOut(new PrintStream(new FileOutputStream(src.filename + ".test2.txt")));
+            src.clf.print();
+            System.out.flush();
+
+            System.setOut(new PrintStream(new FileOutputStream(src.filename + ".test3.txt")));
+            src.clf.prune(10);
+            src.clf.print();
+            System.out.flush();
+
+            System.setOut(new PrintStream(new FileOutputStream(src.filename + ".test4.txt")));
+            src.clf.prune(5);
+            src.clf.print();
+            System.out.flush();
+        }
     }
 }
