@@ -127,18 +127,13 @@ Prints a Java code representation of this decision tree in if/else statement for
 ![Example tree with maximum depth 2](classifier-2-levels.png)
 
 ```java
-// Depth 0
 if (vector[318] <= 5.273602694890837)
- // Depth 1
  if (vector[1116] <= 5.093549034038833)
-  // Depth 2
   return false;
  else
   return false;
 else
- // Depth 1
  if (vector[893] <= 5.313808994135437)
-  // Depth 2
   return false;
  else
   return false;
