@@ -26,7 +26,7 @@ As a problem, text classification directly engages the social implications of co
 
 There are three provided datasets: `toxic.tsv`, `tiny.tsv`, and `spam.tsv`.
 
-> ⚠️ The provided `toxic.tsv` and `tiny.tsv` files contain text that may be considered profane, vulgar, or offensive. If you plan to re-distribute this assignment, please exercise caution and review the text content carefully. While the assignment does not ask students to read any of the text in the `tsv` files, the contents of the files may be inadvertently displayed by error messages or other parts of the program during the course of development. We recommend using the `spam.tsv` file.
+> **Instructors**: The provided `toxic.tsv` and `tiny.tsv` files contain text that may be considered profane, vulgar, or offensive. If you plan to re-distribute this assignment, please exercise caution and review the text content carefully. While the assignment does not ask students to read any of the text in the `tsv` files, the contents of the files may be inadvertently displayed by error messages or other parts of the program during the course of development. We recommend using the `spam.tsv` file.
 
 Alternatively, consider asking students to generate their own datasets using text messages or emails they've received from others. This can be a valuable exercise for students to learn how data can be formatted and the vast quantity of data that the classifier needs before it begins to function robustly. `tsv` ([tab-separated values](https://en.wikipedia.org/wiki/Tab-separated_values)) files can be [converted from a spreadsheet](https://support.google.com/merchants/answer/160569?hl=en) or carefully written in a text editor. Our format requires two columns: for each entry, a **label** and the corresponding **message**.
 
@@ -40,23 +40,81 @@ Alternatively, consider asking students to generate their own datasets using tex
 
 ## Specification
 
-Implement a `TextClassifier` data type, a binary decision tree for classifying text documents.
+Implement the `TextClassifier` data type, a decision tree for classifying text documents. A **decision tree** is a special binary tree that can classify messages by learning a hierarchy of questions from a large training dataset of examples. The kinds of questions that the decision tree will ask are of the form: How frequently does each term appear in the message? For example, if we have a spam message like "Snow plows: Find more savings online" the appearance of "snow" and "savings" might each contribute into the decision to classify it as spam. In Java, this logic can be represented using nested `if` statements.
+
+```java
+if (message.toLowerCase().contains("snow"))
+  if (message.toLowerCase().contains("savings"))
+    return true; // If we see "snow" and "savings" together, it has to be spam!
+  else
+    return false; // If we only see "snow", it's probably not spam.
+else
+  return false; // If we don't see "snow", it's also probably not spam.
+```
+
+This is a very simple approach, so it's easy for spammers to get around this by slightly modifying the words they use: the code won't detect "save" in the same way that it detects "savings". And there are common words like "find" or "more": do we treat them the same way as other adjectives or nouns that might provide more information? Furthermore, there might be more effective ways to order the questions too: maybe we should have "savings" rather than "snow" as the root question. All of these are considerations that our `TextClassifier` will handle.
+
+1. To handle slightly different spellings, the `Vectorizer` class standardizes messages to make them easier to process. For example, the words in the message are stemmed to their standardized forms: "snow plow find more save onlin". It also handles common words by learning the words in the dataset are the most informative. The information provided by each word is represented as a number, so a message is an array of numbers representing the informativeness of each word that it contains. We call this array of numbers a **vector**.
+1. To learn the best questions to ask, the `Splitter` class uses each **vector** in the dataset to make decisions on which questions to ask first. In our snow plow example, we might say that "save" is more informative than "snow" for classifying spam. The `Splitter.Result` communicates this idea by describing the `index` into the vector (picking the word out of the array) and the `threshold` for informativeness.
+1. Putting both of these pieces together, the `TextClassifier` is constructed according to the splitter's decisions. When we want to classify a new message, the new message is vectorized and we follow the hierarchy of questions encoded in the tree until we find a true or false leaf node.
+
+`Vectorizer` and `Splitter` are complicated programs, so we've already written them for you. We certainly don't expect you to fully understand how they work. The focus of this assignment is implemented `TextClassifier` using what we've learned about binary tree programming.
 
 ### `TextClassifier(Vectorizer vectorizer, Splitter splitter)`
 
-Constructs a new `TextClassifier` given a fitted `vectorizer` for transforming data points and a `splitter` for determining the splits in the tree. In other words, construct a tree with the given parameters.
+Constructs a new `TextClassifier` given a fitted `vectorizer` for transforming data points and a `splitter` for determining the splits in the tree. In other words, construct a tree with the given parameters where each `Node` in the tree represents a split in the data.
 
-We've done something similar before in section using a `Scanner` instead of a `Splitter`. Just like how the values returned from each call to the `Scanner` defined the shape of the binary tree from section, the values returned from each call to the `Splitter` will define the shape of the decision tree. To use the `Splitter`, first call `Splitter.split()` to get a `Splitter.Result`.
+We've done something similar before in section using a `Scanner` instead of a `Splitter`.[^4] Just like how the values returned from each call to the `Scanner` defined the shape of the binary tree, the values returned from each call to the `Splitter` will define the shape of the decision tree. To use the `Splitter`, first call `Splitter.split()` to get a `Splitter.Result`.
 
-If the result is not `null`, construct a `Node` with the following arguments.
+[^4]:
+    Write a method `readTree` that accepts a `Scanner` as a parameter and that replaces the current tree with one constructed from data stored in the `Scanner`. The data is formatted based on a pre-order traversal with one line for each node. Each line of input has a code indicating the type of node, followed by the data in the node. Consider the following input as an example.
+
+    ```
+    3 7
+    1 9
+    0 5
+    3 8
+    2 4
+    0 9
+    0 6
+    ```
+
+    The tree corresponding to the input is given below.
+
+    ```
+              +---+
+              | 7 |
+              +---+
+             /     \
+         +---+     +---+
+         | 9 |     | 8 |
+         +---+     +---+
+        /         /     \
+    +---+     +---+     +---+
+    | 5 |     | 4 |     | 6 |
+    +---+     +---+     +---+
+                   \
+                   +---+
+                   | 9 |
+                   +---+
+    ```
+
+    Each node `data` value is preceded by an identifier: either 0, 1, 2, or 3.
+
+    - **0** indicates that the associated value is a leaf node (with no children).
+    - **1** indicates a branch node with left child only.
+    - **2** indicates a branch node with right child only.
+    - **3** indicates a branch node with both left and right children.
+
+Then, if the result is not `null`, construct a new `Node` with the following arguments.
 
 - `int index` from the `index` of `Splitter.Result`.
 - `double threshold` from the `threshold` of `Splitter.Result`.
 - `boolean label` from `Splitter.label()`.
-- `Node left` by recursively growing the `left` side `Splitter.Result`.
-- `Node right` by recursively growing the `right` side of `Splitter.Result`.
+- `Node left` by **recursively growing** the `left` side `Splitter.Result`.
+- `Node right` by **recursively growing** the `right` side of `Splitter.Result`.
 
-Otherwise, if the result is `null`, construct a `Node` with only the `Splitter.label()`.
+Otherwise, if the result is `null`, construct a new `Node` with only the `Splitter.label()`.
 
 ### `boolean classify(String text)`
 
@@ -101,6 +159,8 @@ else
 
 ## Running the app
 
+> **Instructors**: A JUnit 5 `TextClassifierTest` integration test suite is provided with hard-coded expected results. Contact the authors for a copy of the solution class. The integration tests provide a basic check on the behavior of the code, but the feedback that is offered is quite limited so we recommend designing other feedback or support mechanisms for students.
+
 To check the classifier's training accuracy, open your terminal, paste the following command, and press <kbd>Enter</kbd>
 
 ```sh
@@ -114,5 +174,3 @@ javac Server.java && java Server toxic.tsv; rm *.class
 ```
 
 Then, open your browser and navigate to <https://localhost:8000>.
-
-A JUnit 5 `TextClassifierTest` class is provided, though it requires a `GoodTextClassifier` reference solution with a modified `print` method that returns the expected string result (rather than actually printing it to the console).
