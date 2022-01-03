@@ -32,34 +32,32 @@ public class TextClassifier {
         }
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws FileNotFoundException {
         if (args.length != 1) {
             throw new IllegalArgumentException("java TextClassifier [tsv file]");
         }
-        String filename = args[0];
-        int N = 5000;
+        File file = new File(args[0]);
+        Scanner input = new Scanner(file);
+        int N = 0;
+        input.nextLine(); // Skip header
+        while (input.hasNextLine()) {
+            N += 1;
+            input.nextLine();
+        }
         boolean[] labels = new boolean[N];
-        String[] corpus = new String[N];
-
-        Scanner input = new Scanner(new File(filename));
+        String[] messages = new String[N];
+        input = new Scanner(file);
         input.nextLine(); // Skip header
         for (int i = 0; i < N; i += 1) {
             Scanner line = new Scanner(input.nextLine()).useDelimiter("\t");
             labels[i] = line.nextBoolean();
-            corpus[i] = line.next();
+            messages[i] = line.next();
         }
 
         Vectorizer vectorizer = new Vectorizer();
-        Splitter splitter = new GiniSplitter(vectorizer.fitTransform(corpus), labels);
+        Splitter splitter = new GiniSplitter(vectorizer.fitTransform(messages), labels);
         TextClassifier clf = new TextClassifier(vectorizer, splitter);
+        clf.prune(10);
         clf.print();
-
-        int correct = 0;
-        for (int i = 0; i < N; i += 1) {
-            if (clf.classify(corpus[i]) == labels[i]) {
-                correct += 1;
-            }
-        }
-        System.out.println("Training accuracy: " + correct / (double) N);
     }
 }
