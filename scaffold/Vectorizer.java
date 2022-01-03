@@ -104,11 +104,11 @@ public class Vectorizer {
         private int size;
 
         // Returns a new BagOfWords with the given words.
-        public BagOfWords(Stream<String> words) {
+        private BagOfWords(Stream<String> words) {
             this.counts = new HashMap<>();
             this.size = 0;
             words.forEach(word -> {
-                counts.merge(word, 1, Integer::sum);
+                counts.merge(word.toLowerCase(), 1, Integer::sum);
                 size += 1;
             });
         }
