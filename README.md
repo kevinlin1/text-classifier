@@ -68,47 +68,7 @@ This is a very simple approach, so it's easy for spammers to get around this by 
 
 Constructs a new `TextClassifier` given a `splitter` for determining the splits in the tree. In other words, construct a tree with the given parameters where each `Node` in the tree represents a split in the data. The constructor also takes a `vectorizer`, but it's only used for implementing another method, `classify`, so all you have to do for now is save the `vectorizer` as a field in your tree.
 
-We've done something similar before in section using a `Scanner` instead of a `Splitter`.[^4] Just like how the values returned from each call to the `Scanner` defined the shape of the binary tree, the values returned from each call to the `Splitter` will define the shape of the decision tree. To use the `Splitter`, first call `Splitter.split()` to get a `Splitter.Result`.
-
-[^4]:
-    Write a method `readTree` that accepts a `Scanner` as a parameter and that replaces the current tree with one constructed from data stored in the `Scanner`. The data is formatted based on a pre-order traversal with one line for each node. Each line of input has a code indicating the type of node, followed by the data in the node. Consider the following input as an example.
-
-    ```
-    3 7
-    1 9
-    0 5
-    3 8
-    2 4
-    0 9
-    0 6
-    ```
-
-    The tree corresponding to the input is given below.
-
-    ```
-              +---+
-              | 7 |
-              +---+
-             /     \
-         +---+     +---+
-         | 9 |     | 8 |
-         +---+     +---+
-        /         /     \
-    +---+     +---+     +---+
-    | 5 |     | 4 |     | 6 |
-    +---+     +---+     +---+
-                   \
-                   +---+
-                   | 9 |
-                   +---+
-    ```
-
-    Each node `data` value is preceded by an identifier: either 0, 1, 2, or 3.
-
-    - **0** indicates that the associated value is a leaf node (with no children).
-    - **1** indicates a branch node with left child only.
-    - **2** indicates a branch node with right child only.
-    - **3** indicates a branch node with both left and right children.
+We've done something similar before in section using a `Scanner` instead of a `Splitter`. Just like how the values returned from each call to the `Scanner` defined the shape of the binary tree, the values returned from each call to the `Splitter` will define the shape of the decision tree. To use the `Splitter`, first call `Splitter.split()` to get a `Splitter.Result`.
 
 Then, if the result is not `null`, construct a new `Node` with the following arguments.
 
