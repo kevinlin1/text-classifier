@@ -1,5 +1,7 @@
 # Text Classifier
 
+> <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Text Classifier</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://kevinl.info/" property="cc:attributionName" rel="cc:attributionURL">Kevin Lin</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
 Inspired by [Perspective API](https://www.perspectiveapi.com/) and its real-time comment moderation tools, this Java programming assignment is about improving online conversations by implementing a decision tree data type for text classification. Although this assignment applies concepts from machine learning and natural language processing, the assignment as presented is designed for a second course in computer programming focusing on 4 fundamental binary search tree operations: construction, search, traversal, and removal. By working on this assignment, students will:
 
 - Define methods that recursively traverse binary trees and modify binary tree node data values.
@@ -133,7 +135,3 @@ javac Server.java && java Server toxic.tsv; rm *.class
 ```
 
 Then, open your browser and navigate to <https://localhost:8000>.
-
-## License
-
-<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Text Classifier</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://kevinl.info/" property="cc:attributionName" rel="cc:attributionURL">Kevin Lin</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
