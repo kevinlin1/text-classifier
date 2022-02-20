@@ -49,11 +49,11 @@ Implement the `TextClassifier` data type, a decision tree for classifying text d
 ```java
 if (message.toLowerCase().contains("snow"))
   if (message.toLowerCase().contains("savings"))
-    return true; // If we see "snow" and "savings" together, it has to be spam!
+    return true;  // If we see "snow" and "savings" together, it has to be spam!
   else
     return false; // If we only see "snow", it's probably not spam.
 else
-  return false; // If we don't see "snow", it's also probably not spam.
+  return false;   // If we don't see "snow", it's also probably not spam.
 ```
 
 This is a very simple approach, so it's easy for spammers to get around this by slightly modifying the words they use: the code won't detect "save" in the same way that it detects "savings". And there are common words like "find" or "more": do we treat them the same way as other adjectives or nouns that might provide more information? Furthermore, there might be more effective ways to order the questions too: maybe we should have "savings" rather than "snow" as the root question. All of these are considerations that our `TextClassifier` will handle.
