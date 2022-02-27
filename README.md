@@ -77,7 +77,7 @@ Then, if the result is not `null`, construct a new `Node` with the following arg
 - `int index` from the `index` of `Splitter.Result`.
 - `double threshold` from the `threshold` of `Splitter.Result`.
 - `boolean label` from `Splitter.label()`.
-- `Node left` by **recursively growing** the `left` side `Splitter.Result`.
+- `Node left` by **recursively growing** the `left` side of `Splitter.Result`.
 - `Node right` by **recursively growing** the `right` side of `Splitter.Result`.
 
 Otherwise, if the result is `null`, construct a new `Node` with only the `Splitter.label()`.
