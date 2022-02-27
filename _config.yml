@@ -1,0 +1,26 @@
+title: Text Classifier
+author: Kevin Lin
+description: Implementing a decision tree data type for text classification
+baseurl: "/text-classifier"
+url: "https://kevinl.info"
+permalink: pretty
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - Makefile
+
+github:
+  private: false
+  source:
+    branch: "main"
+    path: "/"
+  repository_url: "https://github.com/kevinlin1/text-classifier"
